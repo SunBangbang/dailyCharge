@@ -1,0 +1,22 @@
+<view class='all'>
+  <view class="open_top">
+    <view class="title">请输入您充电端口二维码后四位</view>
+    <view class="top_num">
+      <!-- 手指点击触碰一次的时候将动作传给下面的input -->
+      <input disabled catchtap="getFocus" maxlength="1" wx:for="{{num_length}}" wx:key="index" value="{{code_value[index]}}"/>
+    </view>
+    <!-- 实际上时输入这个input框 -->
+    <input maxlength="{{num_length}}" type="number" class="dn" focus="{{isFocus}}" bindinput="inputNum"></input>
+  </view>
+  <view class="open_content">
+    <view class="title">请选择您所在社区</view>
+    <view class="content_list">
+      <scroll-view class="community_list" scroll-y="true">
+        <view class="community" wx:for="{{list}}" wx:key="index">
+          <text class="community_name">{{item.community}}</text>
+          <button class="community_button {{check_index == index ? 'community_check':''}}" data-index="{{index}}" bindtap="remoteOpen">选择</button>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

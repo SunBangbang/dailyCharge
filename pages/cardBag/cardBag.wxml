@@ -1,0 +1,55 @@
+<view class="all">
+	<view class="top">
+		<view class="top_nav">
+			<view class="top_nav_1">
+				<view class="{{check_index == 0?'nav_check':''}}" bindtap="checknav" id="nav_0">我的卡集</view>
+			</view>
+			<view class="top_nav_line"></view>
+			<view class="top_nav_2">
+				<view class="{{check_index == 1?'nav_check':''}}" id="nav_1" bindtap="checknav">我的票券</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="content {{check_index == 0?'left100':''}}">
+		<scroll-view class="card_list" scroll-y="true">
+			<view class="card_item" wx:for='{{user_cards_q}}' wx:key='idx'>
+				<view class="card2">
+					<image src="{{item.img}}"></image>
+				</view>
+				<view class="card_type">{{item.descript}}</view>
+				<view class="card_cost">
+					<text></text>
+					<text>{{item.title}}</text> {{item.unit}}</view>
+				<view class="card_tip">{{item.validity}}</view>
+			</view>
+		</scroll-view>
+	</view>
+
+	<view class="content1 {{check_index == 1?'right100':''}}">
+		<scroll-view class="card_list" scroll-y="true">
+			<!-- 会员卡 -->
+			<view class='member_top' wx:if='{{user_cards_k.length>0}}' wx:for='{{user_cards_k}}' wx:key='idx' bindtap="equity" wx:if='{{item.cal_type==1}}' data-card_type='{{item.cal_type}}' data-card_id='{{item.cal_id}}'>
+				<view class='top_img'>
+					<image src='{{item.img}}' />
+				</view>
+				<!-- <view class='money'>
+					<text>¥</text>{{item.buy_price/100}}</view> -->
+				<view class='detail'>{{item.validity}}</view>
+			</view>
+			<!-- 卡 -->
+			<view class='mcard' wx:for="{{user_cards_k}}" wx:key='ide' wx:if='{{user_cards_k.length>0}}' bindtap="equity" data-card_type='{{item.cal_type}}' data-card_id='{{item.cal_id}}' wx:if='{{item.cal_type!=1}}'>
+				<image class='mcard_background' src='{{item.img}}' mode="widthFix"></image>
+				<view class='mcard_content'>
+					<view class='mcard_price1'>
+						<text class='mcard_price_num'>{{item.cal_name}}</text>
+					</view>
+					<view class='mcard_price'>
+						<text class='mcard_price_num'>{{item.descript}}</text>
+					</view>
+					<text class='mcard_date'>{{item.validity}}</text>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>

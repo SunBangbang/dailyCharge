@@ -1,0 +1,105 @@
+<view class="all">
+	<view class="comm_img">
+		<swiper autoplay="{{autoplay}}" interval="2000" indicator-dots='true' indicator-active-color='#0da297'
+			ndicator-color='#f1f1f1'>
+			<block wx:for="{{data.banner}}" wx:key="index">
+				<swiper-item>
+					<image src="{{item}}" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+	<view class="comm_price">
+		<view class="price">
+			<text class="price_unit">¥</text>
+			<text class="price_number">{{data.price}}</text>
+		</view>
+		<view class="comm_title">
+			<text>{{data.title}} {{data.word}}</text>
+		</view>
+		<view class="comm_title">
+			<text>{{data.sketch}}</text>
+		</view>
+	</view>
+
+	<view class="comm_option">
+		<view class="option_item" bindtap="choiceComm">
+			<view class="option_name">选择</view>
+			<view class="option_value">
+				<text wx:if="{{isSure}}">已选择　{{data.classify_img[selectIndex].color}}</text>
+				<text wx:if="{{!isSure}}">选择颜色分类</text>
+			</view>
+			<view class="option_choice">
+				<image src="https://api.cd1a.cn/imges/choice.png" mode="widthFix"></image>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 弹框 -->
+<view class="mask" wx:if="{{mask}}"></view>
+<view class="close_pop" wx:if="{{mask}}" bindtap="close_pop">X</view>
+<view class="detail_box" wx:if="{{mask}}">
+	<image class="mask_img" src="{{img}}" wx:if="{{mask}}"></image>
+</view>
+<view class="close" wx:if="{{mask}}" bindtap="close_mask" bindtap="save_img">保存下载</view>
+
+<view class="choice_comm_mask choice_comm_mask_{{choiceCommIsShow?'show':'hide'}}" bindtap="choiceClose"></view>
+<view class="choice_comm choice_comm_{{choiceCommIsShow?'show':'hide'}}">
+	<view class="choice_img">
+		<image src="{{data.spec[selectIndex].img_url}}"></image>
+	</view>
+	<view class="choice_price">
+		<view class="price">
+			<text class="price_unit">¥</text>
+			<text class="price_number">{{data.spec[selectIndex].price * num}}</text>
+		</view>
+		<view class="price_color">
+			<text>已选择　{{data.spec[selectIndex].color}}</text>
+		</view>
+		<view class="price_color">
+			<text>型号　{{data.spec[selectIndex].xinghao}}</text>
+		</view>
+	</view>
+	<view class="choice_option">
+		<view class="choice_option_name">
+			<text>颜色分类</text>
+		</view>
+		<view class="choice_option_list">
+			<view wx:for="{{data.spec}}" wx:key="index" bindtap="selectColor" data-index="{{index}}"
+				class="choice_option_button {{selectIndex == index?'selected':''}}">
+				{{item.color}}
+			</view>
+		</view>
+	</view>
+	<view class="choice_option_num">
+		<text>购买数量</text>
+		<view class="touch">
+			<view class="reduce" bindtap="less">-</view>
+			<text class="num">{{num}}</text>
+			<view class="add" bindtap="add">+</view>
+		</view>
+	</view>
+	<button class="sure_button" bindtap="choiceSure">确定</button>
+</view>
+<view class='zero_img'>
+	<image  wx:for="{{data.img_url}}" src='{{item}}' wx:key="idx" mode="widthFix"></image>
+</view>
+<view style="height:142rpx;width:100%;"></view>
+<view class='btn'>
+	<view class="btn_contain">
+		<view style="text-align: center;">
+			<image class="shop" bindtap="bag_img" src="https://api.cd1a.cn/activity/img/bag.png"></image>
+			<view style="font-size:12px;">商城</view>
+		</view>
+		<view style="text-align: center;">
+			<image class="shop" bindtap="contact_img" src="https://api.cd1a.cn/activity/img/contact.png"></image>
+			<view style="font-size:12px;">客服</view>
+		</view>
+	</view>
+	<view class="button_content">
+		<button class="distribute" bindtap="share_cash">分销赚{{data.rake_back}}元</button>
+		<button class="choice_sure1" bindtap="choiceComm">确定购买</button>
+	</view>
+</view>

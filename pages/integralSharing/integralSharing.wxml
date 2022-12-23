@@ -1,0 +1,36 @@
+<view class='all'>
+  <view>    
+    <image src='https://api.cd1a.cn/imges/sharebg1.png' mode='widthFix' class='share_bg' wx:if='{{small_double_twelve==3}}'></image>
+    <image src='https://api.cd1a.cn/imges/sharebg2.png' mode='widthFix' class='share_bg' wx:if='{{small_double_twelve==2}}'></image>
+  </view>
+  <view class="content">
+    <view class='share_QR'>
+      <image src='{{data.url}}' mode='widthFix'></image>
+    </view>
+    <text class='qr_tip'>扫描二维码或点击下方邀请好友按钮即可完成</text>
+    <view class='share_btn'>
+      <button open-type='share' title='分享' hover-class='none'>邀请好友</button>
+    </view>
+    <view class="invitation">
+      <view class="invitation_title">邀请流程</view>
+      <view class="invitation_method">
+        <view class="method_index">方法1</view>
+        <view class="method_text">
+          <text>让新用户直接扫描邀请二维码即可完成。</text>
+        </view>
+      </view>
+      <view class="invitation_method">
+        <view class="method_index">方法2</view>
+        <view class="method_text">
+          <text>① 点击分享按钮；—— ② 在微信通讯录选择好友名单；—— ③ 新用户点击进入分享页面。</text>
+        </view>
+      </view>
+    </view>
+    <view class="rule">
+      <view class="rule_title">积分规则</view>
+      <view class="rule_method" wx:for='{{data.content}}' wx:key='idx'>
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="all">
+  <view class="title">尊敬的用户您好</view>
+  <view class="content">
+    <text>因小程序端不支持分期付款功能</text>
+    <text>请点击下方按钮</text>
+    <text>下载“天天充电APP”进行接下来的操作</text>
+
+    <button class="download_button" send-message-title="下载天天充电APP"  show-message-card="true" send-message-path="../index/index?id={{id}}" open-type='contact' plain>下载天天充电APP</button>
+  </view>
+</view>

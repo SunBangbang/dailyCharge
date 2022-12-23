@@ -1,0 +1,88 @@
+image {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+.all .gcyq {
+  position: relative;
+}
+
+.all .gc_jf {
+  position: absolute;
+  top: 956rpx;
+  left: 145rpx;
+  width: 460rpx;
+  height: 48rpx;
+}
+
+.btn {
+  position: absolute;
+  top: 1058rpx;
+  left: 0;
+}
+
+.btn_ {
+  position: relative;
+}
+
+.btn button {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color:rgb(235,81,29);
+  background: #fff;
+  opacity: 0.5;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+
+.scroll_content{
+  height: 100vh;
+}
+
+.btn button:nth-child(1) {
+  position: absolute;
+  left: 44rpx;
+  float: left;
+}
+
+.btn button:nth-child(2) {
+  position: absolute;
+  left: 406rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.toTop{
+  height: 92rpx;
+  width: 92rpx;
+  position: fixed;
+  bottom: 30rpx;
+  right: 30rpx;
+  background:rgb(235,81,29);
+  font-size: 24rpx;
+  color: #FFF;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow:0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.toTop text{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.toTopHide{
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.toTopShow{
+  transition: 0.4s;
+  opacity: 1;
+}

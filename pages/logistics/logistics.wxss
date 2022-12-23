@@ -1,0 +1,155 @@
+/*顶部 */
+
+.dexchange_ct {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  margin: 0 24rpx;
+  height: 200rpx;
+}
+
+.content image {
+  width: 160rpx;
+  height: 160rpx !important;
+}
+
+.content .img {
+  flex: 1;
+  padding: 20rpx 0;
+}
+
+.content .written {
+  flex: 3;
+  font-size: 22rpx;
+  color: #333;
+  padding: 26rpx 0 26rpx 24rpx;
+}
+
+.written .color {
+  color: #666;
+  font-size: 20rpx;
+  margin-top: 26rpx;
+}
+
+.content .money {
+  flex: 1;
+  padding: 26rpx 0;
+  color: #fd0303;
+  font-size: 30rpx;
+  text-align: right;
+}
+
+.money .color {
+  color: #666;
+  font-size: 20rpx;
+  margin-top: 50rpx;
+}
+
+.money .integral {
+  margin-top: 32rpx;
+  font-size: 36rpx;
+}
+
+/* 物流信息 */
+
+.logistics_name {
+  height: 112rpx;
+  border-top: 8rpx solid #f4f4f4;
+  border-bottom: 8rpx solid #f4f4f4;
+  color: #333;
+  font-size: 22rpx;
+  line-height: 22px;
+  padding: 26rpx 24rpx 0rpx 24rpx;
+}
+
+.content1 {
+  width: 100%;
+  height: 0;
+  flex-grow: 1;
+  background: #fff;
+  padding-top: 83rpx;
+}
+
+.rate_item {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  position: relative;
+}
+
+.rate_item:nth-child(1) .item_no{
+  font-size: 60rpx;
+  line-height: 74rpx;
+  text-align: center;
+  color: #fff;
+  margin-left: 24rpx;
+   width: 12rpx;
+   height: 12rpx;
+   background-color: #fff;
+   border: 12rpx solid #0da297;
+   border-radius: 50%;
+
+}
+
+.item_no{
+  font-size: 60rpx;
+  line-height: 74rpx;
+  text-align: center;
+  color: #fff;
+  margin-left: 24rpx;
+   width: 12rpx;
+   height: 12rpx;
+   background-color: #fff;
+   border: 12rpx solid #d2d2d2;
+   border-radius: 50%;
+
+}
+
+.now_no {
+  background-color: #fa956b;
+}
+
+view.now_title {
+  color: #fa956b;
+}
+
+.item_content {
+  width: 0;
+  flex-grow: 1;
+  height: 100%;
+  margin: 6rpx 45rpx 6rpx 21rpx;
+}
+
+.item_tip {
+  color: #333;
+  font-size: 20rpx;
+  word-break: keep-all;
+}
+
+
+.item_date {
+  margin-top: 4rpx;
+  color: #333;
+  font-size: 20rpx;
+}
+
+
+.item_dashes {
+  position: absolute;
+  border-left: 1rpx solid #e5e5e5;
+  width: 50rpx;
+  height: 162rpx;
+  left: 40rpx;
+  top: 38rpx;
+}
+
+.rate_item:last-child .item_dashes {
+  border: none;
+}
+.phone{
+  color: #0da297;
+  text-decoration: underline;
+}

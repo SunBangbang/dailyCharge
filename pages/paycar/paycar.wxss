@@ -1,0 +1,76 @@
+.content_goods_ {
+  background: #fff;
+}
+
+.detailed {
+  display: flex;
+  padding: 10px 10px;
+}
+
+.car_img {
+  margin-right: 10px;
+}
+
+.car_img > image {
+  width: 150px;
+  height: 110px;
+}
+
+.car_right {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #666666;
+  font-size: 12px;
+}
+
+.user {
+  background: #F4F4F4;
+  padding: 4px 0;
+}
+
+.user_content {
+  background: #fff;
+  width: 100%;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  margin-left: 10px;
+}
+
+.input > input {
+  margin-left: 10px;
+}
+
+.method {
+  color: #0DA297;
+  margin: 20px 0 20px 10px;
+}
+
+.pay_method {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
+button {
+  width: 100%;
+  letter-spacing: 1px;
+  color: #fff;
+  background: #0DA297;
+  border: 0;
+  border-radius: 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.weixin {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+}

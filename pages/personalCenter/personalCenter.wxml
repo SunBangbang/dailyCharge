@@ -1,0 +1,118 @@
+<view class='all'>
+	<!-- 个人信息 -->
+	<view class='personal_top'>
+		<view class='personal_url'>
+			<view class='personal_img'>
+				<image src='{{data.avatarUrl}}' type="userNickName" mode='widthFix'></image>
+			</view>
+			<view class='personal_deil'>
+				<view class='id'>
+					{{data.nickName}}
+					<image src='https://api.cd1a.cn/imges/vip.png' mode='widthFix' wx:if='{{data.vip ==2}}'></image>
+				</view>
+				<view class='card' wx:if='{{data.vip_describe}}'>
+					<text>{{data.vip_describe}}</text>
+				</view>
+				<view class='card' wx:if='{{data.sat_free}}'>
+					<text>{{data.sat_free}}</text>
+				</view>
+			</view>
+			<view class='recharge' wx:if='{{data.open_sign==2}}'>
+				<text bindtap='signin'>签到送礼</text>
+			</view>
+			<view class='recharge_' wx:if='{{data.open_sign==3}}' bindtap="sign">签到送礼</view>
+
+			<!-- 签到弹框 -->
+			<cover-view class="mask" wx:if="{{mask}}"></cover-view>
+			<cover-view class="popup" wx:if="{{mask}}">
+				<cover-image src="http://api.cd1a.cn/imges/sign_center.png"></cover-image>
+				<cover-view class="download">
+					<button class="download_btn" send-message-title="下载天天充电APP" show-message-card="true"
+						send-message-path="../index/index" open-type='contact'>确认</button>
+				</cover-view>
+			</cover-view>
+			<cover-view class="close" wx:if="{{mask}}">
+				<cover-image bindtap="close" class="close_img" src="https://api.cd1a.cn/imges/close.png"></cover-image>
+			</cover-view>
+		</view>
+	</view>
+	<!-- 白色展示 -->
+	<view class='personal_mask'>
+		<view class='personal_con'>
+			<view class='user'>
+				<view>天天币</view>
+				<view class="{{data.money.length<9?'font':'fontHover'}}">{{data.money/100}}</view>
+			</view>
+			<view class='box'></view>
+			<view class='user'>
+				<view>赠币</view>
+				<view class="{{data.currency.length<9?'font':'fontHover'}}">{{data.currency/100}}</view>
+			</view>
+			<view class='box1'></view>
+			<view class='user'>
+				<view>积分余额</view>
+				<view class="{{data.integration.length<9?'font':'fontHover'}}">{{data.integration}}</view>
+			</view>
+		</view>
+		<view class='message'>{{data.consumption_describe}}</view>
+	</view>
+
+	<!-- 导航 -->
+	<view class='navigtion'>
+		<view class='icon' wx:for='{{nav}}' wx:key='idx' wx:for-index="idx" data-index='{{idx}}' bindtap='navigtion'>
+			<image src='{{item.img}}' mode='widthFix'></image>
+			<view>{{item.name}}</view>
+		</view>
+	</view>
+
+		<!-- 轮播 -->
+		<view class='swiper'>
+		<swiper autoplay="true" interval="2000" circular='true'>
+			<block wx:for="{{active}}" wx:key='idx' wx:for-index="idx">
+				<swiper-item>
+					<image src="{{item.img}}" class="slide-image" width="355" height="150" bindtap='share' data-index="{{idx}}" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+	<!-- 活动充值 -->
+	<view class="Arecharge">
+		<view class="exhibition">
+			<view class="etitle">
+				<view class="title">
+					<span></span>
+					<span>特惠套餐</span>
+				</view>
+				<!-- <view class="more" wx:if='{{data.ad_card_num==2}}'>更多</view> -->
+			</view>
+			<view class="img" bindtap="cards">
+				<image src='{{data.ad_card_img}}'></image>
+			</view>
+		</view>
+		<view class="exhibition">
+			<view class="etitle">
+				<view class="title">
+					<span></span>
+					<span>充值中心</span>
+				</view>
+				<!-- <view class="more" wx:if='{{data.ad_pay_num==2}}'>更多</view> -->
+			</view>
+			<view class="img" bindtap='wxRecharge'>
+				<image src='{{data.ad_pay_img}}'></image>
+			</view>
+		</view>
+	</view>
+
+	<!-- end -->
+	<view class='bottom'>
+		<view class='title' bindtap='mobie' style='text-align:left'>
+			<text>全国客服电话 </text>
+			<text>400-688-8919</text>
+		</view>
+		<view class='title' wx:if='{{operator_phone}}' bindtap='phone'>
+			<text>本社区运维电话 </text>
+			<text>{{operator_phone}}</text>
+		</view>
+	</view>
+</view>

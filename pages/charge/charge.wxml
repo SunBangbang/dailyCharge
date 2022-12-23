@@ -1,0 +1,106 @@
+<view>
+	<view class="top">
+		<view class="top_text">
+			{{year_month}}
+			<!-- <view class="top_arrow"></view> -->
+		</view>
+		<picker mode="date" value="{{changeDate}}" fields="month" class="top_button" bindchange="bindDateChange">
+			选择
+		</picker>
+	</view>
+	<scroll-view class="content" scroll-y="true" bindscrolltolower="loadMore">
+		<view class="content_list">
+			<view wx:for="{{recordDate}}" wx:key="index">
+				<view class="record_item {{item.isShow?'record_item_show':''}}" catchtap='showdetial' data-user_log_id='{{item.user_log_id}}' data-status='{{item.status}}' data-index="{{index}}">
+					<view class="r_item_top">
+						<text class="item_date">{{item.start_time}}</text>
+						<text class="item_des" wx:if='{{item.status==1}}'>充电中</text>
+						<text class="item_des" wx:if='{{item.status==2}}' >{{item.title}}</text>
+						<text class="item_des1" wx:if='{{item.status==3}}'>客服已核实退回</text>
+						<text class="item_des {{item.status==4?'item_des1':'item_des'}}" wx:if='{{item.status==4}}'>端口故障</text>
+						<text class="item_des1" wx:if='{{item.status==5}}'>大功率退款</text>
+					</view>
+					<!-- 消费详情 -->
+					<view class="r_item_bottom">
+						<!-- 表格 -->
+						<!-- <view class="r_table" wx:if='{{item.status==2}}'>
+              <view class="tr tr1">
+                <view class='td' wx:if='{{item.power_billing>1}}'>功率</view>
+                <view class='td'>单价</view>
+                <view class='td'>时间</view>
+                <view class='td'>总价</view>
+              </view>
+              <view class="tr tr2" wx:if='{{item.power_billing>1}}'>
+                <view class='td'>{{item.power_description}}</view>
+                <view class='td'>{{item.unit_price}}</view>
+                <view class='td'>{{item.time}}小时</view>
+                <view class='td'>
+                  <text class="item_consume" wx:if='{{item.status==2}}'>{{item.price_all}}天天币</text>
+                </view>
+              </view>
+              <view class="tr tr3" wx:if='{{item.power_billing<=1}}'>
+                <view class='td'>{{item.unit_price}}</view>
+                <view class='td'>{{item.time}}小时</view>
+                <view class='td'>
+                  <text class="item_consume" wx:if='{{item.status==2}}'>{{item.price_all}}天天币</text>
+                </view>
+              </view>
+              <view class="tr tr4">
+                <view class='td'>
+                  <text class='td_money'>{{item.money}}(端口号:{{item.port}})</text>
+                </view>
+              </view>
+            </view> -->
+						<!-- 新表格 -->
+						<view class="tr" wx:if='{{item.status==2}}'>
+							<view class="tr_power">{{item.detil.title}}</view>
+							<view class="tr_consumption">
+								<view class="td">
+									<text decode="{{true}}" space="{{true}}">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长</text>
+									<text>{{item.detil.time}}</text>
+								</view>
+								<view class="td">
+									<text decode="{{true}}" space="{{true}}">单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价</text>
+									<text>{{item.detil.unit_price}}</text>
+								</view>
+								<view class="td">
+									<text decode="{{true}}" space="{{true}}">合&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计</text>
+									<text>{{item.detil.pay_money}}</text>
+								</view>
+							</view>
+							<view class="br"></view>
+							<view class="tr_discount" wx:if='{{item.detil.is_show==1}}'>
+								<view class="td" wx:if='{{item.detil.is_time==0}}'>
+									<text decode="{{true}}" space="{{true}}">优惠时长</text>
+									<text>{{item.detil.reduce_time}}</text>
+								</view>
+								<view class="td" wx:if='{{item.detil.is_time==1}}'>
+									<text decode="{{true}}" space="{{true}}">优惠金额</text>
+									<text>{{item.detil.reduce_money}}</text>
+								</view>
+								<view class="td">
+									<text decode="{{true}}" space="{{true}}">享受优惠后单价</text>
+									<text>{{item.detil.reduce_price}}</text>
+								</view>
+							</view>
+							<view class="br" wx:if='{{item.detil.is_show==1}}'></view>
+							<view class="tr_pay">
+								<view class="td">
+									<text decode="{{true}}" space="{{true}}">实&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;付&nbsp;&nbsp;<text id="remarks">{{item.detil.remark}}</text></text>
+									<text id="all">{{item.detil.true_money}}<text>币</text></text>
+								</view>
+							</view>
+						</view>
+
+						<view class="tr1" wx:if='{{item.status!=2}}'>{{item.detil.title}}</view>
+						<view class="item_arrow {{item.isShow?'item_arrow_down':''}}"></view>
+						<view catchtap='scan' data-user_log_id='{{item.user_log_id}}' data-status='{{item.status}}' wx:if='{{item.status!=2}}'>{{item.money}}</view>
+					</view>
+
+					<view class="cb"></view>
+				</view>
+			</view>
+		</view>
+		<view wx:if="{{recordDate.length == total}}" class="notMore">没有更多</view>
+	</scroll-view>
+</view>

@@ -1,0 +1,302 @@
+page {
+  background: #fff;
+}
+
+.all {
+  height: calc(100vh - 98rpx);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.comm_img {
+  width: 100%;
+  background: #000;
+}
+
+.comm_img swiper {
+  height: 828rpx;
+}
+
+.comm_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.comm_price {
+  width: 100%;
+  background-color: #fff;
+}
+
+.price_unit {
+  font-size: 32rpx;
+  color: #ff0303;
+}
+
+.price_number {
+  font-size: 52rpx;
+  line-height: 52rpx;
+  color: #ff0303;
+}
+
+.price {
+  padding: 24rpx 0 10rpx 24rpx;
+  margin-top: 72rpx;
+}
+
+.comm_title {
+  padding: 24rpx;
+  padding-top: 0;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 40rpx;
+  font-weight: bolder;
+}
+
+.btn {
+  display: flex;
+  position: fixed;
+  line-height: 98rpx;
+  bottom: 0;
+  width: 100%;
+  height: 98rpx;
+  border-top: 2rpx solid #e5e5e5;
+  background: #fff;
+}
+
+.btn view:nth-child(1) {
+  flex: 1;
+  width: 0;
+  color: #ff0303;
+  font-size: 32rpx;
+  padding-left: 24rpx;
+}
+
+.btn view:nth-child(1) text {
+  color: #666;
+  font-size: 22rpx;
+}
+
+.btn view:nth-child(2) {
+  width: 250rpx;
+  font-size: 32rpx;
+}
+
+.choice_sure1 {
+  width: 100%;
+  background-color: #0da297;
+  height: 98rpx;
+  line-height: 98rpx;
+  color: #fff;
+  border-radius: 0;
+}
+
+button::after {
+  border: none;
+}
+
+.comm_button {
+  border-radius: 0;
+  font-size: 32rpx;
+}
+
+.comm_option {
+  flex: 1;
+  flex-grow: 1;
+  background-color: #fff;
+  width: 100%;
+}
+
+.option_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 88rpx;
+  position: relative;
+  margin: 0 26rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.option_name {
+  color: #666;
+  font-size: 20rpx;
+  margin-right: 19rpx;
+}
+
+.option_value {
+  flex: 1;
+  color: #333;
+  font-size: 20rpx;
+}
+
+.option_choice image {
+  width: 32rpx;
+}
+
+.choice_comm_mask {
+  background-color: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.choice_comm_mask_hide {
+  transition: 0.4s;
+  opacity: 0.0;
+  z-index: -1;
+}
+
+.choice_comm_mask_show {
+  transition: 0.4s;
+  opacity: 0.6;
+  z-index: 8;
+}
+
+.choice_comm {
+  z-index: 9;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60vh;
+  background-color: #fff;
+  padding: 0 24rpx;
+}
+
+.choice_comm_show {
+  transition: 0.4s;
+  margin-bottom: 0;
+}
+
+.choice_comm_hide {
+  transition: 0.4s;
+  margin-bottom: -80vh;
+}
+
+.choice_img {
+  width: 230rpx;
+  height: 230rpx;
+  border: 1rpx solid #dedede;
+  border-radius: 16rpx;
+  position: absolute;
+  top: -60rpx;
+  left: 24rpx;
+  background-color: #fff;
+}
+
+.choice_img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+}
+
+.choice_price {
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  border-bottom: 1rpx solid #efefef;
+  padding-left: 254rpx;
+}
+
+.price_color {
+  color: #333;
+  font-size: 22rpx;
+}
+
+.choice_price .price {
+  padding: 0;
+  margin-bottom: 10rpx;
+}
+
+.choice_option {
+  height: 195rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  border-bottom: 1rpx solid #efefef;
+}
+
+.choice_option_name {
+  color: #333;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  margin-left: 2rpx;
+}
+
+.choice_option_list {
+  margin-bottom: 20rpx;
+}
+
+.choice_option_button {
+  display: inline-block;
+  height: 44rpx;
+  color: #666;
+  font-size: 26rpx;
+  line-height: 44rpx;
+  background-color: #fff;
+  border: 1rpx solid #0da297;
+  padding: 0 22rpx;
+  border-radius: 22rpx;
+  margin-right: 18rpx;
+}
+
+.choice_option_list .selected {
+  background-color: #0da297;
+  color: #fff;
+}
+
+.choice_sure {
+  position: absolute;
+  bottom: 26rpx;
+  left: 24rpx;
+  right: 24rpx;
+  border-radius: 36rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  background-color: #0da297;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.sure_button {
+  position: absolute;
+  bottom: 26rpx;
+  left: 24rpx;
+  right: 24rpx;
+  border-radius: 36rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  background-color: #0da297;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.zero_img image {
+  width: 100%;
+}
+
+.tips {
+  margin-top: 40rpx;
+  color: #ff0303;
+  text-align: center;
+  width: 100%;
+  font-size: 28rpx;
+}
+
+.option_tips {
+  margin-left: 20rpx;
+  color: #ff0303;
+  text-align: center;
+  width: 100%;
+  font-size: 20rpx;
+}

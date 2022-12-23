@@ -1,0 +1,45 @@
+<view class="all">
+  <view class="top">
+    <text class="top_title">好友贡献排行榜</text>
+    <text class="top_tip">{{describe}}</text>
+  </view>
+  <view class="record">
+    <view class="record_people">
+      <view class="record_item_title">累计邀请人数</view>
+      <view class="record_item_val">{{recommend}}
+        <text class="record_item_unit">名</text>
+      </view>
+    </view>
+    <view class="record_center_line"></view>
+    <view class="record_integral">
+      <view class="record_item_title">累计获得积分</view>
+      <view class="record_item_val">{{sum}}
+        <text class="record_item_unit">分</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="content">
+    <scroll-view class="recomm_list" scroll-y="true" bindscrolltolower="loadMore">
+      <view class="recomm_item_list">
+        <view class="recomm_item" wx:for="{{list}}" wx:key="index">
+          <view class="item_no">{{index>2?index+1:''}}</view>
+          <view class="item_icon">
+            <image src="{{item.avatarUrl}}"></image>
+          </view>
+          <view class="item_name">{{item.nickName}}</view>
+          <view class="item_integral">{{item.num}}</view>
+        </view>
+      </view> 
+    </scroll-view>
+  </view>
+
+  <view class="bottom">
+    <button class="invitation" bindtap='share'>去邀请</button>
+  </view>
+</view>
+
+
+
+
+

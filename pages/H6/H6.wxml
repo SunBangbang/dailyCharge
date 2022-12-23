@@ -1,0 +1,20 @@
+  <view class="view1">
+  	<view class="title">您所需缴纳的尾款是</view>
+  </view>
+  <view class="view2">
+  	<view class="content">
+  		<view class="c1"><text class="ipt">{{money/100}}</text><text>元</text></view>
+  		<view class="c2">确认无误后，点击下方按钮支付。</view>
+  	</view>
+  </view>
+  <view class="view3" wx:if='{{course!=5}}'>
+  	<button bindtap="sure">确定</button>
+  </view>
+   <view class="view4">
+  	<view class="content">
+    <text>支付完成后，请根据通知</text>
+    <text>根据约定时间、在指定地点提车</text>
+    <text>如有问题请致电：400-6888-919</text>
+    </view>
+  </view>
+

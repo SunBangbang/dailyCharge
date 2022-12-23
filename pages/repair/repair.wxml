@@ -1,0 +1,71 @@
+<view class='all'>
+	<!-- 单选框 -->
+	<view class='repair_top' wx:if='{{log_id}}'>
+		<radio-group class="radio-group" bindchange="radioChange">
+			<view>
+				<label>
+					<radio value="1" color="#0da297" /> 插排没电
+				</label>
+			</view>
+			<view>
+				<label>
+					<radio value="2" color="#0da297" /> 排插指示灯不亮
+				</label>
+			</view>
+      <view>
+				<label>
+					<radio value="3" color="#0da297" /> 二维码损坏
+				</label>
+			</view>
+			<view>
+				<label>
+					<radio value="4" color="#0da297" /> 其他
+					<view class="are">
+						<textarea class="areas" placeholder='留下点评，帮助更多人' bindinput="inputs" type='text' >
+              <!-- <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text> -->
+            </textarea>
+					</view>
+				</label>
+			</view>
+		</radio-group>
+	</view>
+	<!-- 个人中心报修 -->
+	<view class='repair_top1' wx:if='{{!log_id}}'>
+		<view class='equipment'>
+			<text decode="{{true}}">设&ensp;备&ensp;号:</text>
+			<input placeholder='请输入二维码号' bindinput='equipment' maxlength="8" type='number' />
+		</view>
+		<view class='city'>
+			<text>小区名称:</text>
+			<input placeholder='请输入小区名称' bindinput='city' />
+		</view>
+		<view class="are">
+			<textarea class="areas" placeholder='留下点评，帮助更多人'  bindinput="inputs_">
+        <!-- <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text> -->
+      </textarea>
+		</view>
+	</view>
+	<view class='repair_center'>
+		<view class='phone'>
+			<image src='https://api.cd1a.cn/imges/phone.png' mode='widthFix'></image>
+			<view>
+				<input placeholder='输入手机号码' placeholder-class='placeholder' bindinput='phone' maxlength='11' type='number' />
+				<form bindsubmit="getVerCode" class="subForm" report-submit="true" bindreset="formReset">
+					<button formType="submit" class="{{takeTime<nextClickTime?'tGray':''}}">获取验证码{{takeTime
+            <nextClickTime? '('+takeTime+ 's)': ''}}</button>
+				</form>
+			</view>
+		</view>
+		<view class='phone'>
+			<image src='https://api.cd1a.cn/imges/verification.png' mode='widthFix'></image>
+			<view>
+				<input placeholder='输 入 验 证 码' placeholder-class='placeholder' bindinput='verification_ipt' />
+			</view>
+		</view>
+	</view>
+	<view class='repair_bottom'>
+		<form bindsubmit="sureSubmit" report-submit="true" bindreset="formReset">
+			<button formType="submit">确定提交</button>
+		</form>
+	</view>
+</view>

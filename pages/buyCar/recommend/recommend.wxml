@@ -1,0 +1,24 @@
+<view class="all">
+  <view class="top" style=" background: url({{data.back_img}})">
+    <view class="title">{{data.top}}</view>
+  </view>
+  <view class="content">
+    <view class="qr">
+      <image src="{{data.url}}" mode='widthFix'></image>
+    </view>
+    <view class="content_tip">扫描二维码或点击下方分享按钮即可完成</view>
+    <view class="content_recommend">
+      <button class="content_button" open-type='share' title='分享' hover-class='none'>分享给好友</button>
+    </view>
+    <view class='content_explain'>
+      <view class="explain_title">
+        <view></view>
+        <text>规则说明</text>
+        <view></view>
+      </view>
+      <view class="explain_list">
+        <text wx:for='{{data.content}}' wx:key='idx'>{{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>

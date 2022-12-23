@@ -1,0 +1,198 @@
+/* pages/mcard/mcard.wxss */
+
+page {
+  background: #fff;
+}
+
+.mcard_title {
+  position: relative;
+  padding: 20rpx;
+  border-bottom: 2rpx rgb(229, 229, 229) solid;
+}
+
+.mcard_title_background {
+  width: 100%;
+}
+
+.mcard_title_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.mcard_title_price {
+  position: absolute;
+  right: 40rpx;
+  top: 108rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.mcard_title_price_num {
+  font-size: 60rpx;
+}
+
+.mcard_title_price_state {
+  position: absolute;
+  right: 30rpx;
+  bottom: 30%;
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  line-height: 36rpx;
+  padding: 0 20rpx;
+  border: 2rpx solid #fff;
+}
+
+.mcard_title_tip {
+  position: absolute;
+  left: 40rpx;
+  bottom: 35%;
+  color: #fff;
+  font-size: 20rpx;
+  white-space: nowrap;
+}
+
+.mcard_title_date {
+  position: absolute;
+  left: 40rpx;
+  bottom: 10%;
+  color: #fff;
+  font-size: 22rpx;
+  white-space: nowrap;
+}
+
+.mcard_context_tip1 {
+  padding: 30rpx 20rpx;
+}
+
+.mcard_context_tip1 view:nth-child(1) {
+  color: #f00404;
+  font-weight: 800;
+  font-size: 30rpx;
+}
+
+.mcard_context_tip1 view:nth-child(2) {
+  color: #333;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  text-indent: 48rpx;
+  margin-top: 10rpx;
+}
+
+.mcard_context_tip2 {
+  padding: 30rpx 20rpx;
+  margin-bottom: 120rpx;
+}
+
+.mcard_context_tip2 view:nth-child(1) {
+  color: #333;
+  font-weight: 800;
+  font-size: 30rpx;
+}
+
+.mcard_context_tip2 view:nth-child(2) {
+  color: #333;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  text-indent: 48rpx;
+  margin-top: 10rpx;
+}
+
+.mcard_bottom {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 100rpx;
+  border-top: 2rpx #f3f3f3 solid;
+  background: #fff;
+  z-index: 10;
+}
+
+.mcard_bottom_total {
+  float: left;
+  line-height: 100rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.mcard_bottom_submit {
+  float: right;
+  padding: 0 50rpx;
+  line-height: 100rpx;
+  background: #0da297;
+  border: none;
+  font-size: 30rpx;
+  border-radius: 0;
+  color: #fff;
+}
+
+.mcard_context1 {
+  position: relative;
+  font-size: 24rpx;
+  text-align: center;
+  margin: 40rpx 0 200rpx 0;
+  padding-bottom: 100rpx;
+
+}
+
+.mcard_context1 icon {
+  top: 7rpx;
+  width: 70rpx;
+  height: 40rpx;
+}
+
+.mcard_context1 text:nth-child(2) text {
+  color: #0da297;
+}
+
+.mcard_context1 text:nth-child(3) {
+  display: block;
+  color: #0da297;
+  margin-top: 26rpx;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 16rpx 24rpx;
+  margin-bottom: 0;
+  font-size: 36rpx;
+  color: #0da297;
+}
+
+.option_item {
+  height: 88rpx;
+  border: 1rpx solid #0da297;
+  width: 100%;
+  margin: 14rpx 0;
+  border-radius: 12rpx;
+}
+
+.option_item.check {
+  background: #0da297;
+  color: #fff;
+}
+
+.option_item.cantcheck {
+  color: #aeaeae;
+  border-color: #aeaeae;
+}
+
+.option_centent {
+  margin: 0 90rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.option_centent .option_item_name {
+  flex: 1;
+}

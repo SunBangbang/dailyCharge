@@ -1,0 +1,330 @@
+<view class='all'>
+	<view class='topPicture' wx:if="{{data.rebroadcast.length > 0}}">
+		<swiper class='slide' autoplay="true" interval="2000" circular='true'>
+			<block wx:for="{{data.rebroadcast}}" wx:key='idx' wx:for-index="idx">
+				<swiper-item>
+					<image style="width: 100%; height: 160rpx;" src="{{item.open_sign_img}}" class="slide-image" bindtap='signin' data-index='{{idx}}' />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- 头部 -->
+	<view class='head'>
+		<view class='head_title'>
+			请选择充电时长
+		</view>
+		<view class='head_time'>
+			<view class='time' wx:for="{{data.time_price_arr}}" wx:key='idx'
+				wx:if='{{(!(operat!=2 && (item.time/1)>(rest_time/1))) && reson != true}}'>
+				<button bindtap='selectionTime' data-time='{{item.time}}' data-index='{{index}}'
+					class="sitTime {{item.time==time?'sitTime1':'sitTime'}}">
+					<text>{{item.time}}小时</text>
+					<text wx:if="{{data.send_time_type == 2 && item.time>=discount_coupon_time && data.mf!=5 && data.mf!=7 && data.month_card_scheme!=2 && reson == true}}">{{data.tips}}</text>
+					<text wx:if="{{data.send_time_type == 9 && item.time>=discount_coupon_time && data.mf!=5 && data.mf!=7 && data.month_card_scheme!=2 && reson == true}}">送一小时充电券</text>
+				</button>
+				<image mode='widthFix' class='delivery'
+					wx:if="{{data.send_time_type == 9 && item.time>=discount_coupon_time && data.mf!=5 && data.mf!=7 && data.month_card_scheme!=2 && reson == true}}"
+					src='https://api.cd1a.cn/imges/cdsq.png'></image>
+				<image class='delivery' 
+				wx:if="{{data.send_time_type == 2 && item.time>=discount_coupon_time && data.mf!=5 && data.mf!=7 && data.month_card_scheme!=2 && reson == true}}" 
+				src="{{data.send_stamps_img}}"></image>
+			</view>
+			<view class='time' wx:for="{{data.time_price_arr}}" wx:key='idx'
+				wx:if='{{reson == true}}'>
+				<button bindtap='selectionTime' data-time='{{item.time}}' data-index='{{index}}'
+					class="sitTime {{item.time==time?'sitTime1':'sitTime'}}">
+					<text>{{item.time}}小时</text>
+					<text 
+					wx:if="{{data.send_time_type == 2 && item.time>=discount_coupon_time && data.mf!=5 && data.mf!=7 && data.month_card_scheme!=2 && reson == true}}">{{data.tips}}</text>
+					<text
+						wx:if="{{data.send_time_type == 9 && item.time>=discount_coupon_time && data.mf!=5 && data.mf!=7 && data.month_card_scheme!=2 && reson == true}}">送一小时充电券</text>
+				</button>
+				<image mode='widthFix' class='delivery'
+					wx:if="{{data.send_time_type == 9 && item.time>=discount_coupon_time && data.mf!=5 && data.mf!=7 && data.month_card_scheme!=2 && reson == true}}"
+					src='https://api.cd1a.cn/imges/cdsq.png'></image>
+					<image class='delivery' wx:if="{{data.send_time_type == 2 && item.time>=discount_coupon_time && data.mf!=5 && data.mf!=7 && data.month_card_scheme!=2 && reson == true}}" src="{{data.send_stamps_img}}"></image>
+			</view>
+			<view class='time' wx:for="{{3-data.time_price_arr.length%3}}" wx:key='idx'>
+			</view>
+			<!-- 温馨提示 -->
+			<view class="noteDelivery" wx:if='{{data.send_stamps != "" && reson == true && data.send_time_type == 2}}'>
+				{{data.send_stamps}}
+			</view>
+		</view>
+	</view>
+	<!-- 占位 -->
+	<view class='box'></view>
+	<!-- 中间 -->
+
+	<view class='middle'>
+		<!-- 卡使用 -->
+		<!-- 不使用月卡的情况下 -->
+		<view class='middle_top' wx:if='{{case == true && data.month_card_scheme == 0 && data.card_num != 0 && data.card_list.length >= 0}}'>
+			<text>年/月卡状态</text>
+			<view>
+				<picker bindchange="bindPickerChangeC" value="{{index1}}" range="{{data.card_list}}"
+					range-key="cal_name" wx:if='{{data.card_list.length >= 1}}'>
+					<view class="picker">
+						{{data.card_list[index1].cal_name}} {{data.card_list[index1].descript}}
+					</view>
+				</picker>
+			</view>
+			<text class="picker" wx:if='{{data.card_list.length == 0}}'>暂无可用卡</text>
+			<view>
+				<image mode='widthFix' class='right' src='https://api.cd1a.cn/imges/right.png'></image>
+			</view>
+		</view>
+
+
+		<!-- 使用月卡情况下 展示月卡时间 -->
+		<view class='middle_top' wx:if='{{case == true && data.month_card_scheme == 1 && data.card_num > 0 && data.card_list.length > 0}}'>
+			<text>年/月卡状态</text>
+			<view>
+				<picker bindchange="bindPickerChangeC" value="{{index1}}" range="{{data.card_list}}"
+					range-key="cal_name" wx:if='{{data.card_list.length >= 1}}'>
+					<view class="picker">
+						{{data.card_list[index1].cal_name}} {{data.card_list[index1].descript}}
+					</view>
+				</picker>
+			</view>
+			<view>
+				<image mode='widthFix' class='right' src='https://api.cd1a.cn/imges/right.png'></image>
+			</view>
+		</view>
+		<!-- 使用月卡情况下 无月卡去购买 -->
+		<view class='middle_top' wx:if='{{case == true && data.month_card_scheme == 1 && data.card_num == 0}}'>
+			<text>年/月卡状态</text>
+			<view>
+				<picker bindchange="bindPickerChangeC" value="{{index1}}" range="{{data.card_list}}"
+					range-key="cal_name" wx:if='{{data.card_list.length >= 1}}'>
+					<view class="picker">
+						{{data.card_list[index1].cal_name}} {{data.card_list[index1].descript}}
+					</view>
+				</picker>
+			</view>
+			<text class="picker" bindtap="mon_card">暂无可用卡，请购买(可点击)</text>
+			<view>
+				<image mode='widthFix' class='right' src='https://api.cd1a.cn/imges/right.png'></image>
+			</view>
+		</view>
+		<view class='middle_top' wx:if='{{case == true && data.month_card_scheme == 1 && data.card_num > 0 && data.card_list.length == 0 && (data.available_month == 1 || data.available_month ==3)}}'>
+			<text>年/月卡状态</text>
+			<view>
+				<picker bindchange="bindPickerChangeC" value="{{index1}}" range="{{data.card_list}}"
+					range-key="cal_name" wx:if='{{data.card_list.length >= 1}}'>
+					<view class="picker">
+						{{data.card_list[index1].cal_name}} {{data.card_list[index1].descript}}
+					</view>
+				</picker>
+			</view>
+			<text class="picker" bindtap="mon_card">暂无可用卡，请购买(可点击)</text>
+			<view>
+				<image mode='widthFix' class='right' src='https://api.cd1a.cn/imges/right.png'></image>
+			</view>
+		</view>
+		<!-- 使用月卡情况下 月卡都在使用中 -->
+		<view class='middle_top' wx:if='{{case == true && data.month_card_scheme == 1 && data.card_num > 0 && data.card_list.length == 0 && (data.available_month == 2 || data.available_month ==4)}}'>
+			<text>年/月卡状态</text>
+			<view>
+				<picker bindchange="bindPickerChangeC" value="{{index1}}" range="{{data.card_list}}"
+					range-key="cal_name" wx:if='{{data.card_list.length >= 1}}'>
+					<view class="picker">
+						{{data.card_list[index1].cal_name}} {{data.card_list[index1].descript}}
+					</view>
+				</picker>
+			</view>
+			<text class="picker">所有月卡在使用中或无可用卡!</text>
+			<view>
+				<image mode='widthFix' class='right' src='https://api.cd1a.cn/imges/right.png'></image>
+			</view>
+		</view>
+
+			<!-- 强制使用月卡情况下 月卡都在使用中 -->
+			<view class='middle_top' wx:if='{{data.month_card_scheme == 2}}'>
+				<text>年/月卡状态</text>
+				<view>
+					<picker bindchange="bindPickerChangeC" value="{{index1}}" range="{{data.card_list}}"
+						range-key="cal_name" wx:if='{{data.card_list.length >= 1}}'>
+						<view class="picker">
+							{{data.card_list[index1].cal_name}} {{data.card_list[index1].descript}}
+						</view>
+					</picker>
+				</view>
+				<text class="picker" wx:if="{{data.card_list.length == 0 && (data.available_month == 2 || data.available_month == 4)}}">所有月卡在使用中或无可用卡!</text>
+				<text class="picker" wx:if="{{(data.card_list.length == 0 && (data.available_month == 1 || data.available_month == 3)) || data.card_num == 0}}" bindtap="mon_card">暂无可用卡，请购买(可点击)</text>
+				<view>
+					<image mode='widthFix' class='right' src='https://api.cd1a.cn/imges/right.png'></image>
+				</view>
+			</view>
+
+		
+
+		<view class='middle_bottom' wx:if='{{data.mf==5||data.mf==7}}'>
+			<view>套餐状态</view>
+			<view class='details'>
+				{{data.mf_describe}}
+			</view>
+		</view>
+
+		<!-- 券使用 -->
+		<view class='middle_top' catchtap='coupon' wx:if='{{data.month_card_scheme != 2 && reson == true}}'>
+			<text bindtap="discount">优惠券</text>
+			<view class="cancel" wx:if="{{time != 0 && data.ticket_list.length >= 1}}" bindtap="cancel">
+				<text>取消</text>
+			</view>
+			<view bindtap="discount">
+				<picker mode = selector bindchange="bindPickerChange" value="{{index}}" range="{{arr_detail}}" wx:if='{{data.ticket_list.length >= 1}}'>
+					<!-- 满足条件自动选择优惠券 -->
+					<view class="picker" wx:if="{{time != 0}}">
+						{{ticket_id == 0 ? arr_detail[0] : arr_detail[index]}}
+					</view>
+				</picker>
+			</view>
+			<text class="picker" wx:if='{{data.ticket_list.length == 0}}'>暂无优惠券可用</text>
+			<view>
+				<image mode='widthFix' class='right' src='https://api.cd1a.cn/imges/right.png'></image>
+			</view>
+		</view>
+		
+		<!-- 购买优惠套餐 -->
+		<view class='middle_bottom' wx:if="{{data.month_card_scheme != 2 && reson == true}}">
+			<view>购买优惠套餐</view>
+			<view class='details' bindtap="purchase">
+				<button>购买</button>
+			</view>
+		</view>
+
+		<!-- 资费详情 -->
+		<view class='middle_bottom'>
+			<view>资费详情</view>
+			<view class='details'>
+				<view wx:for='{{data.reminder}}' wx:key='idx'>
+					{{item}}
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<!-- 双十二活动 -->
+	<!-- <view class='mask' wx:if='{{popup}}'> </view>
+	<view wx:if='{{popupIndex == index}}' class='mon_cared' wx:for='{{listPopup.show}}' wx:key="item" wx:index="index">
+		<image src="{{item.img}}" mode='widthFix' bindtap='doubleEleven'></image>
+		<image src="https://api.cd1a.cn/imges/close.png" mode='widthFix' bindtap='closePopup'></image>
+		<text class="close_text">关闭</text>
+	</view> -->
+
+	<!-- 充值活动 -->
+	<view class='mask' wx:if='{{popup}}'> </view>
+	<view wx:if='{{flage_Sign== 2}}' class='RAall' wx:if='{{popupIndex == index}}' wx:for='{{listPopup.show}}'
+		wx:key="item" wx:index="index">
+		<view bindtap="popPurchase" data-url_type="{{item.url_type}}" data-url="{{item.url}}">
+			<image src="{{item.img}}" mode='widthFix' class="RAbg RAbg1"></image>
+			<!-- <view class="RAcenter" wx:if='{{item.url_type==7}}' bindtap="signin">
+				<view class='RA50'>
+					<image src="https://api.cd1a.cn/imges/RA50.png" mode='widthFix'></image>
+					<view class="RA50_2">
+						<view class="RA1"><text class="RA1_1">充 </text><text
+								class="RA1_2">{{listPopup.sign_list[0].pay}}</text> <text class="RA1_3">元 </text> <text
+								class="RA1_1"> 送</text> <text class="RA1_2">{{listPopup.sign_list[0].give}}</text><text
+								class="RA1_3">元</text></view>
+						<view class="RA2">{{listPopup.sign_list[0].descript}}</view>
+					</view>
+				</view>
+
+				<view class='RA50'>
+					<image src="https://api.cd1a.cn/imges/RA99.png" mode='widthFix'></image>
+					<view class="RA50_2">
+						<view class="RA1"><text class="RA1_1">充 </text><text
+								class="RA1_2">{{listPopup.sign_list[1].pay}}</text> <text class="RA1_3">元 </text> <text
+								class="RA1_1"> 送</text> <text class="RA1_2">{{listPopup.sign_list[1].give}}</text><text
+								class="RA1_3">元</text></view>
+						<view class="RA2">{{listPopup.sign_list[1].descript}}</view>
+					</view>
+				</view>
+
+				<view class='RA50'>
+					<image src="https://api.cd1a.cn/imges/RA199.png" mode='widthFix'></image>
+					<view class="RA50_2">
+						<view class="RA1"><text class="RA1_1">充 </text><text
+								class="RA1_2">{{listPopup.sign_list[2].pay}}</text> <text class="RA1_3">元 </text> <text
+								class="RA1_1"> 送</text> <text class="RA1_2">{{listPopup.sign_list[2].give}}</text><text
+								class="RA1_3">元</text></view>
+						<view class="RA2">{{listPopup.sign_list[2].descript}}</view>
+					</view>
+				</view>
+			</view> -->
+		</view>
+		<view class='close'>
+			<image src="https://api.cd1a.cn/imges/close.png" mode='widthFix' bindtap='closePopup'></image>
+			<text class="close_text">关闭</text>
+		</view>
+	</view>
+
+
+
+	<!-- 充电收费标准 -->
+	<view class='mask' wx:if='{{charge}}'> </view>
+	<view wx:if='{{charge}}' class='charge'>
+		<view class='charge_top'>
+			本社区收费标准
+		</view>
+		<view class='charge_center'>
+			<view wx:for='{{data.reminder}}' wx:key='idx'>
+				{{index+1}}、 {{item}}
+			</view>
+		</view>
+		<view class='charge_bottom'>
+			<view wx:if='{{count>10}}'>
+				不再提醒
+				<icon type="success" size='14' color='#b2b2b2' data-index='1' bindtap='icon1' wx:if='{{icon1}}' />
+				<icon type="success" size='14' color='#0da297' data-index='2' bindtap='icon2' wx:if='{{icon2}}' />
+			</view>
+			<view wx:if="{{takeTime>0}}">({{takeTime}}秒后自动关闭)</view>
+		</view>
+	</view>
+
+	<!--弹窗-->
+	<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+	<view class="modal-dialog" wx:if="{{showModal}}"> 
+		<view class="modal-content">
+			<text>{{agreement}}</text>
+		</view>
+		<view class="modal-footer">
+			<view class="btn-cancel" bindtap="hideModal" data-status="cancel">取消</view>
+			<view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+		</view>
+	</view> 
+
+
+	<!-- 用券弹窗 -->
+	<!-- <view class='mask' wx:if='{{ordinary}}'> </view>
+	<view class="ordinary" wx:if='{{ordinary}}'>
+		<view class="top">
+			<view class="title">温馨提示</view>
+			<view class="content">您有可使用的优惠券</view>
+		</view>
+		<view class="btn">
+			<view>
+				<picker class="ordinary_picker" bindchange="bindPickerChange1" value="{{index}}" range="{{arr_detail}}">
+						<view class="text">
+							选择优惠
+						</view>
+			  </picker>
+			</view>
+			<view><button bindtap="balance">放弃优惠</button></view>
+		</view>
+	</view> -->
+
+
+	<!-- 温馨提示 -->
+	<view class="alarm">为了您的爱车安全，请连接充电器，再点击开始充电!</view>
+	<!-- 底部 -->
+	<view class='bottom'>
+			<button class='openCharging' bindtap="openStop" wx:if="{{full_stop == 2}}">充满即停(测试)</button>
+			<button class='openCharging' wx:if="{{stop}}">充满即停(测试)</button>
+			<button class='openCharging' bindtap="openCharging" wx:if='{{general_charge == "2"}}'>开启充电(余额)</button>
+			<button class='openCharging' bindtap="cantUse" wx:if='{{disable}}'>开启充电(余额)</button>
+			<button class='month_btn' bindtap="openMonth" wx:if='{{month_charge == "2"}}'>开始充电(月卡)</button>
+			<button class='month_btn' bindtap="cantUse" wx:if='{{cant}}'>开始充电(月卡)</button>
+		</view>
+</view>

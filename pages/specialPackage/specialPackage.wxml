@@ -1,0 +1,5 @@
+<view class="all">
+	<view>
+		<image wx:for='{{data}}' wx:key='idx' src="{{item.img}}" data-type="{{item.url_type}}" bindtap="img_jump"></image>
+	</view>
+</view>

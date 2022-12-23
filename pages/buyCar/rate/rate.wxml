@@ -1,0 +1,26 @@
+<view class="all" style="  background: url({{data.back_img}}) no-repeat;">
+  <view class="top">
+    <view class="title" bindtap="{{rate_list[rate_list.length-1].new == 2?'toEndPay':''}}">{{data.top}}</view>
+    <button class="recommend" bindtap="recommend">推荐好友购车成功赚10000积分</button>
+  </view>
+  <view class="content">
+    <scroll-view class="content_scroll">
+      <view class="rate_item" wx:for="{{rate_list}}" wx:key="index">
+        <view class="item_no {{item.new == 2?'now_no':''}}">{{item.course}}</view>
+        <view class="item_content">
+          <view class="item_tip {{item.new == 2?'now_title':''}}">
+            <text>{{item.descrip}}</text>
+            <text>{{item.tips}}</text>
+          </view>
+          <view class="item_date">
+            <text>{{item.time}}</text>
+          </view>
+        </view>
+        <view class="item_but" bindtap="toEndPay" wx:if='{{item.course == 1 && item.new == 2}}'>
+          <button>支付尾款</button>
+        </view>
+        <view class="item_dashes"></view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

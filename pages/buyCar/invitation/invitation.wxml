@@ -1,0 +1,13 @@
+<view class='all'>
+  <image wx:for="{{image_list}}" src='{{item}}' mode="widthFix" class='gcyq'></image>
+  <view class='btn'>
+    <view claaa='btn_'>
+      <button bindtap='recommend'>推荐好友购买</button>
+      <button bindtap='procedure'>我要购买</button>
+    </view>
+  </view>
+  <!-- <view class="toTop {{isShowToTop?'toTopShow':'toTopHide'}}" bindtap="toTop">
+      <text>回到\n顶部</text>
+    </view> -->
+  <!-- </scroll-view> -->
+</view>

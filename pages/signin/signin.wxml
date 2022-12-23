@@ -1,0 +1,84 @@
+<view class="all">
+	<view class="top">
+		<text class="top_title">当前积分</text>
+		<text class="top_tip">{{data.integration}}</text>
+		<button class="top_rule" bindtap="signIn">签到规则</button>
+	</view>
+	<view class="record">
+		<view>
+			<text class="exchange_tip">每日签到送积分兑换免费充电券</text>
+			<text class="exchange" bindtap="exchange">去兑换>></text>
+		</view>
+		<view class="sign_list">
+			<view class="sign_item" wx:for="{{data.list}}" wx:key="index">
+				<view class="sign_item_content" data-integral="{{item.integral}}" bindtap="{{item.already_sign == 1?'sign':''}}">
+					<text>+{{item.integral}}</text>
+					<view class="{{item.already_sign == 3 ?'sign_false':(item.already_sign == 2 ?'sign_true':'sign_wait')}}"></view>
+				</view>
+				<text class="sign_item_tip">{{item.msg}}</text>
+			</view>
+
+		</view>
+	</view>
+	<!-- 签到成功 -->
+	<view class="mask" wx:if='{{mask}}'></view>
+	<view class="success" wx:if='{{mask}}'>
+		<view class="content">恭喜您今日签到获得{{nowintegral}}积分</view>
+		<view bindtap="close" class="close">
+			<image src="https://api.cd1a.cn/imges/signin_success.png" mode="widthFix"></image>
+		</view>
+	</view>
+	<!-- bottom -->
+	<view class="content">
+		<view class="title">充值天天送大礼</view>
+		<view class="ticket_list">
+			<view class="ticket_item" wx:for="{{data.card_list}}" wx:key="index">
+				<image src="{{item.img}}" class="item_img"></image>
+				<view class="item_text">
+					<text class="item_text1 {{item.kind_id != 6?'gray1':''}}">{{item.title}}</text>
+					<text>{{item.applet_descript}}</text>
+				</view>
+				<button class="item_draw {{item.already_get == 2?'gray':''}}" data-is_get="{{item.is_get}}" data-price="{{item.price}}" data-kind_id="{{item.kind_id}}" data-already_get="{{item.already_get}}" bindtap="receive" wx:if='{{item.only_app==1}}'>{{item.already_get == 1?'领取':'已领取'}}</button>
+        
+				<button class="item_draw" send-message-title="下载天天充电APP" show-message-card="true" send-message-path="../index/index" open-type='contact' wx:if='{{item.only_app==2}}'>领取</button>
+			</view>
+		</view>
+	</view>
+	<!-- 充值活动 -->
+	<view class='mask' wx:if='{{open_sign == 2 && open_sign_flag == 2}}'> </view>
+	<view wx:if='{{open_sign == 2 && open_sign_flag == 2}}' class='RAall'>
+		<view bindtap="signin">
+			<image src="{{img}}" mode='widthFix' class="RAbg RAbg1"></image>
+			<!-- <view class="RAcenter">
+				<view class='RA50'>
+					<image src="https://api.cd1a.cn/imges/RA50.png" mode='widthFix'></image>
+					<view class="RA50_2">
+						<view class="RA1"><text class="RA1_1">充 </text><text class="RA1_2">{{sign_list[0].pay}}</text> <text class="RA1_3">元 </text> <text class="RA1_1"> 送</text> <text class="RA1_2">{{sign_list[0].give}}</text><text class="RA1_3">元</text></view>
+						<view class="RA2">{{sign_list[0].descript}}</view>
+					</view>
+				</view>
+
+				<view class='RA50'>
+					<image src="https://api.cd1a.cn/imges/RA99.png" mode='widthFix'></image>
+					<view class="RA50_2">
+						<view class="RA1"><text class="RA1_1">充 </text><text class="RA1_2">{{sign_list[1].pay}}</text> <text class="RA1_3">元 </text> <text class="RA1_1"> 送</text> <text class="RA1_2">{{sign_list[1].give}}</text><text class="RA1_3">元</text></view>
+						<view class="RA2">{{sign_list[1].descript}}</view>
+					</view>
+				</view>
+
+				<view class='RA50'>
+					<image src="https://api.cd1a.cn/imges/RA199.png" mode='widthFix'></image>
+					<view class="RA50_2">
+						<view class="RA1"><text class="RA1_1">充 </text><text class="RA1_2">{{sign_list[2].pay}}</text> <text class="RA1_3">元 </text> <text class="RA1_1"> 送</text> <text class="RA1_2">{{sign_list[2].give}}</text><text class="RA1_3">元</text></view>
+						<view class="RA2">{{sign_list[2].descript}}</view>
+					</view>
+				</view>
+			</view> -->
+		</view>
+		<view class='close' bindtap="RAclose">
+			<image src="https://api.cd1a.cn/imges/close.png" mode='widthFix' bindtap='showIndex'></image>
+			<text class="close_text">关闭</text>
+		</view>
+	</view>
+
+</view>

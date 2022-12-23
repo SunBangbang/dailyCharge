@@ -1,0 +1,305 @@
+page {
+  background: #f4f4f4;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.top {
+  height: 96rpx;
+  background: #fff;
+  position: relative;
+}
+
+.top_text {
+  display: inline-block;
+  font-size: 46rpx;
+  line-height: 96rpx;
+  margin-left: 26rpx;
+  position: relative;
+}
+
+.top_arrow {
+  position: absolute;
+  right: -30rpx;
+  top: 32rpx;
+  width: 18rpx;
+  height: 18rpx;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transform: rotate(135deg);
+}
+
+.top_button {
+  position: absolute;
+  border-radius: 22rpx;
+  background: #333;
+  font-size: 26rpx;
+  width: 96rpx;
+  height: 44rpx;
+  text-align: center;
+  line-height: 44rpx;
+  color: #fff;
+  top: 26rpx;
+  right: 24rpx;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  top: 109rpx;
+}
+
+.record_item {
+  transition: 0.2s;
+  overflow: hidden;
+  position: relative;
+  height: 88rpx;
+  font-size: 20rpx;
+  padding: 0 25rpx;
+  background: #fff;
+  color: #999;
+  max-height: 88rpx;
+  margin-bottom: 4rpx;
+}
+
+.record_item_show {
+  transition: 0.2s;
+  padding-bottom: 20rpx;
+  height: auto;
+  max-height: 532rpx;
+  overflow: visible;
+}
+
+.item_date {
+  font-size: 22rpx;
+  line-height: 88rpx;
+  left: 25rpx;
+  color: #333;
+}
+
+.item_des {
+  font-size: 32rpx;
+  line-height: 88rpx;
+  float: right;
+  margin-right: 64rpx;
+  color: #0da297;
+}
+
+.item_des1 {
+  font-size: 32rpx;
+  line-height: 88rpx;
+  float: right;
+  margin-right: 64rpx;
+  color: #fd4e57;
+}
+
+/*.r_table {
+   width: 100%;
+  border-right: 1rpx solid #666;
+  border-top: 2rpx solid #666;
+}
+
+.td {
+  border-left: 2rpx solid #666;
+  border-bottom: 2rpx solid #666;
+  padding: 10rpx 14rpx;
+  flex: 1;
+  min-width: 1rpx;
+  text-align: center;
+  min-height: 34rpx;
+  line-height: 44rpx;
+  font-size: 20rpx;
+  text-overflow:ellipsis;
+  word-wrap:break-word;
+}
+
+.td .td_money{
+    color:#0da297;
+    word-wrap:break-word;
+    display: inline-block;
+}
+
+.tr {
+  display: flex;
+  align-items: center;
+}
+
+.tr1 {
+  color: #333;
+  background: #e5e5e5;
+}
+
+.tr2{
+  position: relative;
+}
+
+.tr2 .td{
+  flex: none;
+  width: calc(25% - 30rpx);
+}
+
+.tr2 .td:not(:first-child){
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tr2 .td:nth-child(2){
+  left: 25%;
+}
+
+.tr2 .td:nth-child(3){
+  left: 50%;
+}
+
+.tr2 .td:nth-child(4){
+  left: 75%;
+}
+
+.tr3{
+  position: relative;
+}
+
+.tr3 .td{
+  flex: none;
+  width: calc(33.33% - 30rpx);
+}
+
+.tr3 .td:not(:first-child){
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tr3 .td:nth-child(2){
+  left: 33.33%;
+}
+
+.tr3 .td:nth-child(3){
+  left: 66.66%;
+}
+
+.tr4 .td {
+  text-align: left;
+}
+
+.tr4 .td text {
+  display: block;
+}  */
+
+
+
+/* 新表格 */
+.tr {
+  border: 2rpx solid #333333;
+  border-radius: 16rpx;
+}
+
+.tr .tr_power {
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+  background: #333333;
+  color: #fff;
+  padding: 12rpx 24rpx;
+}
+
+.tr .tr_consumption {
+  padding: 17rpx 24rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+.tr .tr_discount{
+  padding: 17rpx 24rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #ff0000;
+}
+.tr .tr_pay{
+  padding: 17rpx 24rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+.tr #remarks{
+  color: #ff0000;
+  font-size: 20rpx;
+}
+.tr #all{
+  color: #0da297;
+  font-size: 40rpx;
+}
+.tr #all text{
+  color: #0da297;
+  font-size: 24rpx;
+}
+
+.tr .td {
+  display: flex;
+}
+
+.tr .td text {
+  flex: 1;
+}
+
+.tr .td text:nth-child(2) {
+  text-align: right;
+  color: #000;
+  font-weight: 500;
+}
+.tr .br{
+  border-bottom:2rpx solid #333333 ;
+  margin: 0 24rpx;
+}
+
+.item_arrow {
+  transition: 0.2s;
+  width: 18rpx;
+  height: 18rpx;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  position: absolute;
+  right: 24rpx;
+  top: 28rpx;
+  line-height: 88rpx;
+  transform: rotate(135deg);
+}
+
+.item_arrow_down {
+  transition: 0.2s;
+  top: 40rpx;
+  transform: rotate(-45deg);
+}
+
+.item_consume {
+  top: 88rpx;
+  left: 25rpx;
+}
+
+.item_tip {
+  float: right;
+  text-align: right;
+  line-height: 32rpx;
+  width: 60%;
+}
+
+.cb {
+  clear: both;
+}
+
+.notMore {
+  padding: 20rpx 0;
+  font-size: 22rpx;
+  text-align: center;
+  color: #999;
+}

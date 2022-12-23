@@ -1,0 +1,46 @@
+<view clasa='all'>
+  <!-- 轮播 -->
+  <view class='swiper' wx:if="{{info.active.length > 0}}">
+    <swiper autoplay="true" interval="2000" circular='true'>
+      <block wx:for="{{info.active}}" wx:key='idx' wx:for-index="idx">
+        <swiper-item>
+          <image src="{{item.img}}" class="slide-image" bindtap='share' data-index="{{idx}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='wx_top'>
+    请选择充值天天币数量
+  </view>
+  <view class='wx_center'>
+    <view class='btn' wx:for='{{info.money_list}}' wx:key='idx'>
+      <button data-money='{{item.money}}' class="price {{item.money==money?'price1':'price'}}" bindtap='price'><text
+          class="day_">{{item.money/100}}<text>天天币</text></text><text
+          class="price_ {{item.money==money?'price1_':'price_'}}">{{item.yuan}}</text></button>
+    </view>
+    <view class='btn' wx:for="{{3-info.length%3}}" wx:key='idx'>
+      <button class='price' style='border:none;'></button>
+    </view>
+  </view>
+
+  <view wx:if="{{info.descript}}">
+    <view class='wx_top'>
+      活动说明
+    </view>
+    <scroll-view class="scroll-view" scroll-y="true" style="">
+      <view class='rich'>
+        <rich-text space="nbsp" nodes="{{descript}}"></rich-text>
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <view class='wx_bottom'>
+    <!-- <form bindsubmit="wxRecharge" report-submit="true" bindreset="formReset">
+      <button formType="submit">去充值</button>
+    </form> -->
+    <button bindtap="wxRecharge">去充值</button>
+  </view>
+  <!-- <image src="http://api.cd1a.cn/imges/double_twelve@3x.png" bindtap='share' wx:if='{{ball_banner==1}}'></image> -->
+</view>

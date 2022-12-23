@@ -1,0 +1,138 @@
+page {
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.all {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.address_list {
+  flex-grow: 1;
+  height: 0rpx;
+}
+
+.address {
+  border-bottom: 2rpx solid #e5e5e5;
+  padding: 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  background: #fff;
+}
+
+.address_select {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 22rpx;
+  margin-left: -6rpx;
+}
+
+.address_edit {
+  width: 48rpx;
+  position: absolute;
+  right: 78rpx;
+  bottom: 12%;
+}
+.address_delete {
+  width: 48rpx;
+  position: absolute;
+  right: 18rpx;
+  bottom: 12%;
+}
+
+.address_top {
+  color: #333;
+  font-size: 32rpx;
+  margin-bottom: 14rpx;
+}
+
+.address_name {
+  min-width: 130rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.address_phone {
+  vertical-align: middle;
+}
+
+.address_tip {
+  vertical-align: middle;
+  display: inline-block;
+  color: #fff;
+  font-size: 20rpx;
+  height: 24rpx;
+  width: 60rpx;
+  line-height: 24rpx;
+  background-color: #00a3f0;
+  border-radius: 12rpx;
+  text-align: center;
+  margin-left: 10rpx;
+}
+
+.default {
+  background-color: #ff2d55;
+}
+
+.address_bottom {
+  font-size: 20rpx;
+  line-height: 30rpx;
+  color: #333;
+  margin-right: 126rpx;
+}
+
+.address_add {
+  width: 520rpx;
+  height: 72rpx;
+  border-radius: 36rpx;
+  line-height: 72rpx;
+  font-size: 32rpx;
+  color: #fff;
+  background-color: #0da297;
+  margin: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_img {
+  width: 24rpx;
+  height: 24rpx;
+  color: #ccc;
+  transition: color 0.25s;
+  position: relative;
+  margin-right: 8rpx;
+}
+
+.add_img::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  border-top: 5rpx solid #fff;
+}
+
+.add_img::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  border-left: 5rpx solid #fff;
+}

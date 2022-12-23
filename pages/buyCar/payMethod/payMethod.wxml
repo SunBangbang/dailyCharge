@@ -1,0 +1,75 @@
+<view class='all'>
+  <view class="information">
+    <text class="top">填写联系方式</text>
+    <view class="name">
+      <text>姓名 :</text>
+      <input type="text" placeholder="请输入姓名" placeholder-style='color:#999' bindinput='name'></input>
+    </view>
+    <view class="mobie">
+      <text>电话 :</text>
+      <input type="number" maxlength="11" placeholder="请输入电话" placeholder-style='color:#999' bindinput='mobie'></input>
+    </view>
+  </view>
+  <!-- <view class='title_top'>
+    <view class="title_1">
+      <text>请选择提货方式</text>
+    </view>
+    <view class="title_2">
+      <text>自提(立减{{footsPrice}}元)</text>
+      <checkbox name="method" checked="{{!isExpress}}" bindtap="setExpress" data-check="false"></checkbox>
+    </view>
+    <view class="title_3">
+      <text>配送上门</text>
+      <checkbox name="method" checked="{{isExpress}}" bindtap="setExpress" data-check="true"></checkbox>
+    </view>
+  </view> -->
+
+  <!-- <view class='dexchange_top' wx:if="{{isWhiteAdd && isExpress}}">
+    <view bindtap="choseAddress">
+      <view>请填写收货地址</view>
+      <image src='https://api.cd1a.cn/imges/modify.png' mode="widthFix"></image>
+    </view>
+  </view> -->
+
+  <view class='dexchange_top1' wx:if="{{!isWhiteAdd && isExpress}}">
+    <view class='address'>
+      <view>{{address.name}}</view>
+      <view>{{address.phone}}</view>
+      <view>
+        <image src='https://api.cd1a.cn/imges/choice.png' mode="widthFix" bindtap="choseAddress"></image>
+      </view>
+    </view>
+    <view class='address_'>
+      <!-- <text class='default'>默认</text>
+      <text class='label'>公司</text> -->
+      <text>{{address.address}} {{address.detailed}}</text>
+    </view>
+  </view>
+
+
+  <view class='box'></view>
+  <view class='dexchange_ct'>
+    <view class='content'>
+      <view class='img'>
+        <image src='{{data.data.img}}'></image>
+      </view>
+      <view class='written'>
+        <view>{{data.title}} {{data.subtitle}}</view>
+        <view class='color'>颜色分类：{{data.data.color}}</view>
+      </view>
+      <view class='money'>
+        <view>¥{{data.price/100}}</view>
+        <view class='color'>数量：×1</view>
+      </view>
+    </view>
+    <!-- <text class='option_tips' wx:if='{{num<=0}}'>{{zero_sku}}</text> -->
+  </view>
+</view>
+<view class='all_map'>
+  <text bindtap='intoMap' class='map'>地址：西安市莲湖区劳动南路杨树里10栋天天出行总部\n(西安天天充电运营中心)\n电话：029-6802 9911</text>
+</view>
+<view class='btn'>
+  <view>
+    <button class="choice_sure1" bindtap="choiceSure">确定购买</button>
+  </view>
+</view>

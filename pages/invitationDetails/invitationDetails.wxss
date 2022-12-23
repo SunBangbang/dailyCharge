@@ -1,0 +1,81 @@
+page {
+  padding: 0;
+  margin: 0;
+}
+
+.all {
+  height: 100vh;
+}
+
+.content {
+  height: 100%;
+}
+
+._content {
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.content_img {
+  width: 100%;
+  margin-top: -30rpx;
+  vertical-align: bottom;
+  position: relative;
+}
+.content_img1 {
+  width: 100%;
+  margin-top: -30rpx;
+  vertical-align: bottom;
+}
+.shall{
+  position: absolute;
+  top: 734rpx;
+  left: 174rpx;
+  background: #f04b33;
+  color: #fff;
+  width: 402rpx;
+  height: 88rpx; 
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  border-radius:4rpx;
+  letter-spacing:0.6rpx; 
+}
+
+
+.toTop{
+  height: 92rpx;
+  width: 92rpx;
+  position: fixed;
+  bottom: 30rpx;
+  right: 30rpx;
+  background: #f04b33;
+  font-size: 24rpx;
+  color: #FFF;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow:0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.toTop text{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.toTopHide{
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.toTopShow{
+  transition: 0.4s;
+  opacity: 1;
+}

@@ -1,0 +1,26 @@
+  <view class="view1">
+  	<view class="title">您所充值金额为</view>
+  </view>
+  <view class="view2">
+  	<view class="content">
+  		<view class="c1"><text class="ipt">{{dataset.price/100}}</text><text>元</text></view>
+  		<view class="c2">确认无误后，点击下方按钮支付。</view>
+  	</view>
+  </view>
+  <view class="view5">
+  	<view class="content">
+  		<view>{{data.red_one}}</view>
+  		<view>{{data.red_two}}</view>
+  		<view>{{data.red_three}}</view>
+  	</view>
+  	<view class="content1">
+  		<view>{{data.black_one}}</view>
+  		<view>{{data.black_two}}</view>
+  	</view>
+  </view>
+  <view class="view3">
+  	<button bindtap="sure">确定支付</button>
+  </view>
+  <view class="view4" bindtap="instructions">
+  	点击查看充电券使用方法>>
+  </view>

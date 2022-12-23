@@ -1,0 +1,57 @@
+<view class='all'>
+	<!-- 会员卡 -->
+	<view class='member_top'>
+		<view class='top_img'>
+			<image src='https://api.cd1a.cn/imges/member_bg.png' />
+		</view>
+		<view class='money'>
+			<text>¥</text>{{data.member_money/100}}</view>
+		<view class='detail'>{{data.effective_date}}</view>
+	</view>
+	<!-- 权益 -->
+	<view class='member_center'>
+		<view class='center_top'>
+			<text></text> 会员权益
+			<text></text> </view>
+		<!-- 图标 -->
+		<view class='icon'>
+			<!-- 免费 -->
+			<view class='icon_img'>
+				<image src='https://api.cd1a.cn/imges/free_.png'></image>
+				<view class='title'>{{data.descript_one_1}}</view>
+				<view class='content'>
+					<text>{{data.descript_one_2}}</text>
+				</view>
+			</view>
+			<!-- 会员卡 -->
+			<view class='icon_img' wx:if='{{data.card_id==2}}'>
+				<image src='https://api.cd1a.cn/imges/vvip_.png'></image>
+				<view class='title'>{{data.descript_two_1}}</view>
+				<view class='content'>
+					<text>{{data.descript_two_2}}</text>
+				</view>
+			</view>
+			<!-- 充电三小时 -->
+			<view class='icon_img'>
+				<image src='https://api.cd1a.cn/imges/three_.png'></image>
+				<view class='title'>{{data.descript_three_1}}</view>
+				<view class='content'>
+					<text>{{data.descript_three_2}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 警告 -->
+	<view class='warning'> {{data.key_point}}</view>
+	<!-- 权益 -->
+	<view class='equity'>
+		<icon type="success" size='14' color='#b2b2b2' data-index='1' bindtap='icon1' wx:if='{{icon1}}' />
+		<icon type="success" size='14' color='#0da297' data-index='2' bindtap='icon2' wx:if='{{icon2}}' /> 点击确认并同意
+		<text bindtap='vip'>《会员卡权益》</text>
+	</view>
+	<!-- 按钮 -->
+	<view class='member_btn'>
+		<button bindtap="memberbtn" class="btn {{index==1?'btn1':'btn'}}">确认开通</button>
+	</view>
+
+</view>

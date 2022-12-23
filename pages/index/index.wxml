@@ -1,0 +1,62 @@
+<!-- 首页 -->
+<view class='all'>
+	<view class="advertise" wx:if="{{enter_coupon.news}}">
+		<view class="ad_text">{{enter_coupon.news}}</view>
+	</view>
+	<!-- 图片 -->
+	<view class='bg'>
+		<view class='rela'>
+			<image src='https://t.cd1a.cn/Public/weixin/images/beijing.png' mode='widthFix' class="bg_img"></image>
+			<view class="gameLogo" wx:if="{{enter_coupon.applet_ad==2}}" bindtap="gameLogo">
+				<image src="{{enter_coupon.ad_img}}" mode='widthFix' />
+			</view>
+		</view>
+		<view class='agreement' bindtap='agreement'>
+			天天充电《用户使用协议》
+		</view>
+		<button class="sweep" bindtap="sweepCode"></button>
+		<view class="qrTip">点击扫码充电</view>
+	</view>
+	<!-- button按钮 -->
+	<view class='center'>
+		<view wx:if='{{enter_coupon.open_remote==2}}'>
+			<button formType="submit" wx:if="{{!phoneNumber}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneRemote">远程开启</button>
+			<button formType="submit" wx:if="{{phoneNumber}}" bindtap="remoteOpen">远程开启</button>
+		</view>
+		<!-- 删除小程序没有用户id时 -->
+		<button wx:if="{{!user_info}}" bindtap="person">个人中心</button>
+		<!-- 授权但没有手机号 -->
+		<button wx:if="{{user_info && !phoneNumber}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">个人中心</button>
+		<!-- 授权有手机号 -->
+		<button wx:if="{{user_info && phoneNumber}}" bindtap="getPersonalCenter">个人中心</button>
+		<button bindtap="signin" wx:if='{{enter_coupon.open_sign==2}}'>签到送礼</button>
+		<button bindtap="battery" wx:if='{{enter_coupon.battery_button==2}}'>{{enter_coupon.battery_button_name}}</button>
+	</view>
+	<!-- 底部 -->
+	<view class='bottom'>
+		<view class='btm_left' bindtap='mobie'>全国客服电话：
+			<text>400-688-8919</text>
+		</view>
+		<view class='btm_right' bindtap='phone' wx:if='{{operator_phone}}'>本社区运维电话：
+			<text>{{operator_phone}}</text>
+		</view>
+	</view>
+
+
+	<!-- 积分弹窗 -->
+	<view class='mask' wx:if='{{showCoupon == 2}}'> </view>
+	<view class='integral' wx:if='{{showCoupon == 2}}'>
+		<image src="{{enter_coupon.battery_help_url}}" mode='widthFix' bindtap="close"></image>
+		<!-- <view class='number'>
+			<view>
+				<text>+</text>{{enter_coupon.referral_sum_bonuses}}<text>分</text></view>
+		</view>
+		<view class='integral_'>
+			<text>{{enter_coupon.title}}</text>
+		</view>
+		<view class='exchange'>
+			<view>*积分可在“个人中心”的“
+				<navigator url="../shoppongMall/shoppongMall" class="shoppongMall">积分商城</navigator>”查看并兑换奖品</view>
+		</view> -->
+	</view>
+</view>

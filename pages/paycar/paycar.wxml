@@ -1,0 +1,48 @@
+<view class="content_goods_">
+  <view class='detailed'>
+    <view class="car_img">
+      <image src="{{details_data.img}}"></image>
+    </view>
+    <view class="car_box">
+      <view>{{details_data.title}}</view>
+      <view class="car_right">
+        <p style="margin-right:5px">颜色分类:</p><span>{{details_data.color}}</span>
+        <p style="margin:0 5px 0 30px">数量:</p><span>x{{details_data.num}}</span>
+      </view>
+      <view style="display: inline-block; margin-right: 3px;font-size: 10px;color: #FD0303;">￥</view><text style="color: #FD0303; font-size: 23px">{{details_data.price}}</text>
+    </view>
+  </view>
+  <view class="user">
+    <view class="user_content">
+      <view class="input">
+        <span>姓名:</span><input type="text" bindinput="name" value="{{name}}" placeholder="请输入您的姓名" />
+      </view>
+      <view style="width:100%;border-top:2px solid #F4F4F4;"></view>
+      <view class="input">
+        <span>电话:</span><input type="text" bindinput="tel" value="{{tel}}" placeholder="请输入您的电话" />
+      </view>
+      <view style="width:100%;border-top:2px solid #F4F4F4;"></view>
+      <view class="input">
+        <span>所在区域:</span>
+        <picker mode="region" bindchange="bindRegionChange" value="{{area_arr}}" >
+          <view class="picker" style="margin-left:10px; color: rgb(128,128,128);">{{ zone ? zone : '请选择所在区域' }}</view>
+        </picker>
+      </view>
+      <view style="width:100%;border-top:2px solid #F4F4F4;"></view>
+      <view class="input">
+        <span>详细地址:</span><input type="text" bindinput="area" placeholder="请输入详细地址" value="{{area}}" />
+      </view>
+    </view>
+  </view>
+  <view class="pay">
+    <view class="method">默认支付方式</view>
+    <view class="pay_method">
+      <view class="left">
+        <image class="weixin" src="https://api.cd1a.cn/activity/img/weixin.png"></image>
+        <text>微信支付</text>
+      </view>
+      <radio color="#0DA297" checked="true"></radio>
+    </view>
+  </view>
+  <button bindtap="confirm">确认购买</button>
+</view>

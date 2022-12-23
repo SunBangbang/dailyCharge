@@ -1,0 +1,2 @@
+<web-view src='https://api.cd1a.cn/sb/jiaoben7212/index.html?id={{id}}'></web-view>
+<!-- <web-view src="{{url}}"></web-view> -->

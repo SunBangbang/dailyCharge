@@ -1,0 +1,19 @@
+<view class="all">
+  <view class="title">填写信息</view>
+  <view class="content">
+    <view>
+      <text>姓　名：</text>
+      <input type="text" bindinput='name'></input>
+    </view>
+    <view>
+      <text>电　话：</text>
+      <input type="text" bindinput='mobie' maxlength='11'></input>
+    </view>
+    <button class="next" bindtap="checkNew">去付款</button>
+  </view>
+  <text class='map'>地址：西安市莲湖区劳动南路杨树里10栋（广成大酒店对面）\n电话：029-6802 9911</text>
+    <view class="all_map">
+    <map bindtap='intoMap' longitude="108.908976" latitude="34.252727" scale="18" style="width:620rpx;height:340rpx;margin: 0 auto;">
+    </map>
+  </view>
+</view>

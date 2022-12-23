@@ -1,0 +1,903 @@
+page {
+  padding-bottom: 98rpx;
+}
+
+/* 头部 */
+
+.head {
+  background: #fff;
+  width: 100%;
+  padding: 48rpx 0 20rpx 0;
+}
+
+.head_title {
+  font-size: 28rpx;
+  color: #333;
+  padding: 0 24rpx 12rpx 24rpx;
+}
+
+.head_time {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.head_time button {
+  flex: 1;
+}
+
+.time {
+  position: relative;
+  width: 218rpx;
+}
+
+.time text:nth-child(1) {
+  font-size: 38rpx;
+  line-height: 38rpx;
+}
+
+.time text:nth-child(2) {
+  font-size: 20rpx;
+  line-height: 20rpx;
+  margin-top: 10rpx;
+}
+
+.cancel {
+  position: absolute;
+  line-height: 90rpx;
+  left: 120rpx;
+  color: #0da297;
+}
+.cancel > text {
+  font-size: 25rpx;
+  border: 1rpx solid #0da297;
+  border-radius: 999px;
+  padding: 8rpx;
+}
+
+.sitTime {
+  border: 2rpx solid #0da297;
+  height: 120rpx;
+  width: 218rpx;
+  border-radius: 8rpx;
+  background: #fff;
+  text-align: center;
+  color: #0da297;
+  font-size: 38rpx;
+  margin-bottom: 24rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sitTime1 {
+  /* display: inline-block;
+  height: 120rpx;
+  width: 218rpx;
+  line-height: 120rpx;
+  border-radius: 8rpx;
+  background: #0da297;
+  text-align: center;
+  color: #fff;
+  font-size: 38rpx;
+  margin-bottom: 24rpx; */
+  border: 2rpx solid #0da297;
+  height: 120rpx;
+  width: 218rpx;
+  border-radius: 8rpx;
+  background: #0da297;
+  text-align: center;
+  color: #fff;
+  font-size: 38rpx;
+  margin-bottom: 24rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+button::after {
+  border: none;
+}
+
+/* 占位 */
+
+.box {
+  background: #f4f4f4;
+  height: 12rpx;
+}
+
+/* 中间 */
+
+.middle {
+  width: 100%;
+  background: #fff;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.middle_top {
+  display: flex;
+  padding: 0 25rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  line-height: 88rpx;
+  justify-content: space-between;
+}
+
+.middle_top_ {
+  display: flex;
+  padding: 22rpx 25rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  justify-content: space-between;
+}
+
+.mxc {
+  width: 550rpx;
+  word-break: break-all;
+}
+
+.middle_top text {
+  flex: 1;
+}
+
+.middle_top text:nth-child(2) {
+  text-align: right;
+  color: #666;
+  font-size: 24rpx;
+
+}
+
+/* .middle_top:nth-last-child(1) {
+  border: 0;
+} */
+
+.right {
+  width: 30rpx;
+  margin-top: 32rpx;
+}
+
+.addvip {
+  flex: 1;
+  color: #fd4e57 !important;
+  text-align: right;
+}
+
+picker {
+  width: 520rpx;
+  text-align: right;
+}
+
+.ordinary_picker {
+  width: 270rpx;
+  text-align: center;
+  color: #999999;
+  display: inline-block;
+  height: 88rpx;
+  background: #fff;
+  line-height: 88rpx;
+  font-size: 36rpx;
+}
+
+
+/* 中间下 */
+
+.middle_bottom {
+  display: flex;
+  padding: 30rpx 25rpx;
+  margin-bottom: 45rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.middle_bottom view {
+  flex: 1;
+}
+
+.middle_bottom view:nth-child(2) {
+  text-align: right;
+  color: #666;
+  font-size: 24rpx;
+  line-height: 48rpx !important;
+}
+
+.middle_bottom .details {
+  line-height: 34rpx;
+  text-align: right;
+}
+
+.middle_bottom view:nth-child(2) button {
+  width: 100rpx;
+  height: 40rpx;
+  background: rgba(13, 162, 151, 1);
+  border-radius: 20rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 20rpx;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 283rpx;
+
+}
+
+.middle_bottom view {
+  flex: 1;
+}
+
+.middle_bottom:nth-last-child(1) {
+  border: 0;
+}
+
+/* 底部 */
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom .openCharging {
+  width: 100%;
+  height: 98rpx;
+  line-height: 98rpx;
+  background: #0da297;
+  color: #fff;
+  font-size: 36rpx;
+  border-radius: 0;
+  font-family: YouYuan;
+  border-right: 1px solid #999999;
+}
+
+.grey {
+  background: #dfdfdf;
+  color: #999;
+  width: 100%;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 36rpx;
+  border-radius: 0;
+  font-family: YouYuan;
+}
+.bottom .month_btn {
+  width: 100%;
+  height: 98rpx;
+  line-height: 98rpx;
+  background: #0da297;
+  color: #fff;
+  font-size: 36rpx;
+  border-radius: 0;
+  font-family: YouYuan;
+  border-left: 1px solid #999999;
+}
+
+.alarm {
+  color: red;
+  font-size: 20rpx;
+  position: fixed;
+  bottom: 95rpx;
+  width: 100%;
+  background: white;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+/* 遮罩 */
+
+.mask {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+
+
+/* 月卡 */
+
+.mon_cared {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 52%;
+  transform: translateY(-55%);
+  text-align: center;
+}
+
+.mon_cared image:nth-child(1) {
+  z-index: 6;
+  width: 80%;
+  position: relative;
+}
+
+.mon_cared text {
+  position: absolute;
+  text-align: center;
+  z-index: 7;
+  color: #fff;
+  bottom: 236rpx;
+  font-size: 26rpx;
+}
+
+.mon_cared image:nth-child(2) {
+  z-index: 6;
+  width: 70rpx;
+  margin-top: 20rpx;
+}
+
+.picker {
+  font-size: 24rpx;
+  color: #666;
+  text-align: right;
+}
+
+/* 置顶签到图片 */
+.topPicture image {
+  width: 100%;
+}
+.slide {
+  height: 160rpx;
+}
+
+/* 会员 */
+
+/* .addVip {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  z-index: 6;
+  padding: 40rpx 0 40rpx 0;
+  border-top-right-radius: 20rpx;
+  border-top-left-radius: 20rpx;
+}
+
+.addVip .add_title {
+  text-align: center;
+  padding: 0 24rpx;
+  font-size: 30rpx;
+}
+
+.addVip .add_center {
+  margin-top: 14rpx;
+  padding: 0 24rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+
+.addVip .add_bottom {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.addVip .add_bottom view {
+  flex: 1;
+}
+
+.addVip .add_bottom button {
+  width: 75%;
+  height: 66rpx;
+  line-height: 66rpx;
+} */
+
+/* 收费标准 */
+
+.charge {
+  background: #fff;
+  /* height: 600rpx; */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  border-bottom-right-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+}
+
+.charge_top {
+  text-align: center;
+  padding-top: 85rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 2rpx solid #efefef;
+  margin: 0 155rpx;
+}
+
+.charge_center {
+  padding-top: 44rpx;
+  line-height: 54rpx;
+  font-size: 26rpx;
+  color: #333;
+  text-align: center;
+}
+
+.charge_bottom {
+  text-align: center;
+  font-size: 24rpx;
+  color: #0da297;
+  padding-bottom: 40rpx;
+  line-height: 34rppx;
+  padding-top: 88rpx;
+}
+
+/* 会员卡 */
+
+.add_vip {
+  position: fixed;
+  z-index: 5;
+  width: 74%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add_vip .add_colse {
+  position: absolute;
+  width: 70rpx;
+  bottom: -90rpx;
+}
+
+.add_background {
+  position: relative;
+  width: 100%;
+}
+
+.add_tit {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #714931;
+}
+
+.add_tit .tit_sign {
+  font-size: 40rpx;
+  line-height: 40rpx;
+  display: inline-block;
+  position: relative;
+  top: -50rpx;
+}
+
+.add_tit .tit_price {
+  font-size: 110rpx;
+  line-height: 110rpx;
+  display: inline-block;
+  position: relative;
+  font-style: italic;
+  font-weight: 400;
+  padding-right: 10rpx;
+}
+
+.add_tit .tit_tip {
+  font-size: 50rpx;
+  line-height: 62rpx;
+  display: inline-block;
+  position: relative;
+  top: -6rpx;
+  font-weight: bold;
+}
+
+.add_equitys {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 36%;
+}
+
+.add_equitys view {
+  margin: 0 auto;
+  width: 84%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.add_equitys view view {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 22rpx;
+  color: #714931;
+  font-weight: 600;
+}
+
+.add_equitys view view image {
+  width: 50%;
+  margin-bottom: 8rpx;
+}
+
+.mon_cared .close_text {
+  position: absolute;
+  bottom: 17rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: inline-block;
+  right: 50%;
+  transform: translateX(-50rpx);
+}
+
+.add_vip .close_text {
+  position: absolute;
+  bottom: -73rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: inline-block;
+  right: 50%;
+  transform: translateX(-50rpx);
+}
+
+.equitys text {
+  text-align: center;
+}
+
+.quota {
+  font-size: 26rpx;
+  position: absolute;
+  left: 178rpx;
+  right: 0;
+  top: 61%;
+  color: rgb(113, 73, 49);
+}
+
+.quota text {
+  color: rgb(232, 28, 28);
+  font-weight: 700;
+}
+
+/* 限时会员 */
+
+.vip_time {
+  position: fixed;
+  z-index: 5;
+  width: 74%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vip_time .add_colse {
+  position: absolute;
+  width: 70rpx;
+  bottom: -90rpx;
+}
+
+.vip_time .close_text {
+  position: absolute;
+  bottom: -73rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: inline-block;
+  right: 50%;
+  transform: translateX(-50rpx);
+}
+
+.vip_time_background {
+  position: relative;
+  width: 100%;
+}
+
+.vip_time .time {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50rpx;
+  font-size: 20rpx;
+  text-align: center;
+}
+
+button[plain] {
+  position: fixed;
+  display: inline-block;
+  bottom: 142rpx;
+  width: 300rpx;
+  height: 88rpx;
+  z-index: 7;
+  border: none;
+}
+
+.cantcheck {
+  border: none;
+  background: #dfdfdf;
+  color: #999;
+}
+
+/* 普通月卡提示框 */
+
+.ordinary {
+  width: 540rpx;
+  height: 250rpx;
+  background: #fff;
+  position: absolute;
+  left: 15%;
+  top: 33%;
+  z-index: 6;
+  border-top-left-radius: 8rpx;
+  border-top-right-radius: 8rpx;
+}
+
+.ordinary .top {
+  text-align: center;
+  padding: 24rpx 32rpx;
+}
+
+.ordinary .title {
+  font-weight: 600;
+  font-size: 34rpx;
+}
+
+.ordinary .content {
+  margin-top: 40rpx;
+  color: #333;
+  font-size: 36rpx;
+}
+
+.ordinary .btn {
+  border-top: 2rpx solid #CCCCCC;
+  margin-top: 36rpx;
+  display: flex;
+  width: 540rpx;
+}
+
+.ordinary .btn view {
+  flex: 1;
+  border-right: 2rpx solid #CCCCCC;
+}
+
+.ordinary .btn view:nth-child(2) {
+  flex: 1;
+  border-right: none;
+}
+
+.ordinary .btn view:nth-child(1) button {
+  height: 88rpx;
+  background: #fff;
+  border-radius: 0;
+  font-size: 34rpx;
+  color: #999999;
+  border-bottom-left-radius: 8rpx;
+}
+
+.ordinary .btn view:nth-child(2) button {
+  color: #0da297;
+  height: 88rpx;
+  background: #fff;
+  font-size: 34rpx;
+  border-radius: 0;
+  border-bottom-right-radius: 8rpx;
+}
+
+.delivery {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.noteDelivery {
+  color: #ff0000;
+  text-align: center;
+  letter-spacing: 1rpx;
+  font-size: 20rpx;
+}
+
+
+/* 夏日充值活动 */
+.RAall {
+  position: fixed;
+  z-index: 5;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-55%);
+  text-align: center;
+  left: 10%;
+}
+
+.RAall>view {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.RAall .RAbg {
+  z-index: 6;
+  width: 100%;
+  position: relative;
+}
+
+.RAcenter {
+  z-index: 7;
+  position: absolute;
+  bottom: 36rpx;
+}
+
+.RAall .RA50 {
+  height: 145rpx;
+}
+
+
+
+.RAall .RA50 image {
+  width: 440rpx;
+  height: 120rpx;
+}
+
+.RAall .close {
+  position: relative;
+  bottom: 0;
+}
+
+.RAall .close .close_text {
+  position: absolute;
+  bottom: 17rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: inline-block;
+  right: 50%;
+  transform: translateX(-50rpx);
+}
+
+.RAall .close image {
+  margin-top: 20rpx;
+  width: 70rpx;
+}
+
+.RA50_2 {
+  position: relative;
+  bottom: 138rpx;
+}
+
+.RA1_1 {
+  color: #66A504;
+  width: 40rpx;
+  height: 40rpx;
+  background: rgba(255, 243, 46, 1);
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 26rpx;
+}
+
+.RA1_2 {
+  color: #106248;
+  font-size: 64rpx;
+}
+
+.RA1_3 {
+  font-size: 38rpx;
+  color: rgba(16, 98, 72, 1);
+}
+
+.RA2 {
+  width: 360rpx;
+  height: 28rpx;
+  background: rgba(255, 255, 255, 1);
+  color: #333333;
+  font-size: 20rpx;
+  margin-left: 40rpx;
+}
+
+.text {
+  color: #0da297;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+/* 送券弹框 */
+.mask{
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+.message{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.message cover-image{
+  z-index: 4;
+  position: absolute;
+  bottom:100px;
+  left: 50%;
+  top:50%;
+  margin-top: -330rpx;
+  width: 560rpx;
+  height: 660rpx;
+  margin-left:-280rpx;
+}
+.sure{
+  background: #333333;
+  width: 300rpx;
+  height: 73rpx;
+  color: #fff;
+  z-index:4;
+  position: absolute;
+  left: 50%-300rpx;
+  top:65%;
+  line-height: 73rpx;
+  text-align: center;
+  border-radius: 36rpx;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.7;
+  overflow: hidden;
+  color: #fff;
+  z-index: 9999;
+}
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 35%;
+  left: 0;
+  z-index: 9999;
+  background:#F5F5F5;
+  margin: -180rpx 105rpx;
+  border-radius: 8rpx;
+} 
+.modal-content {
+  padding: 50rpx 15rpx;
+  text-align: center;
+  font-size: 25rpx;
+  color: #666
+}
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 32rpx;
+  line-height: 86rpx;
+}
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+.btn-confirm {
+  width: 50%;
+  color: #666;
+  text-align: center;
+} 

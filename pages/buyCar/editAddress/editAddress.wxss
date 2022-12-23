@@ -1,0 +1,253 @@
+/* 姓名 */
+
+.name {
+  display: flex;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding: 0 24rpx;
+}
+
+.name view:nth-child(1) {
+  flex: 1;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.name view:nth-child(2) {
+  flex: 4;
+}
+
+.name view:nth-child(2) input {
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 电话 */
+
+.phone {
+  display: flex;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding: 0 24rpx;
+}
+
+.phone view:nth-child(1) {
+  flex: 1;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.phone view:nth-child(2) {
+  flex: 4;
+}
+
+.phone view:nth-child(2) input {
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 地址 */
+
+.address {
+  display: flex;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding: 0 24rpx;
+}
+
+.address view:nth-child(1) {
+  flex: 2;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.address view:nth-child(2) {
+  flex: 7;
+}
+
+.address view:nth-child(3) {
+  flex: 1;
+  text-align: right;
+}
+
+.address view:nth-child(2) .picker {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.address view:nth-child(2) .colorB {
+  color: #666;
+}
+
+.address view:nth-child(3) image {
+  width: 44rpx;
+  vertical-align: middle;
+}
+
+/* 详细地址 */
+
+.detailed {
+  display: flex;
+  height: 68rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding: 32rpx 24rpx;
+}
+
+.detailed view:nth-child(1) {
+  flex: 1;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.detailed view:nth-child(2) {
+  flex: 4;
+}
+
+.detailed view:nth-child(2) textarea {
+  font-size: 24rpx;
+  color: #666;
+  height: 68rpx;
+  vertical-align: top;
+  line-height: 36rpx;
+}
+
+.textArea {
+  width: 100%;
+}
+
+/* 地址 */
+
+.address {
+  display: flex;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding: 0 24rpx;
+}
+
+.address view:nth-child(1) {
+  flex: 2;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.address view:nth-child(2) {
+  flex: 7;
+}
+
+.address view:nth-child(3) {
+  flex: 1;
+  text-align: right;
+}
+
+.address view:nth-child(2) .picker {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.address view:nth-child(2) .colorB {
+  color: #666;
+}
+
+.address view:nth-child(3) image {
+  width: 44rpx;
+  vertical-align: middle;
+}
+
+/* 标签 */
+
+.label {
+  display: flex;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  padding: 0 24rpx;
+}
+
+.label view:nth-child(1) {
+  flex: 1;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.label view:nth-child(2) {
+  flex: 4;
+  text-align: left;
+}
+
+.label_ {
+  display: inline-block;
+  text-align: center;
+  background: #fff;
+  color: #333;
+  font-size: 24rpx;
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid #999;
+  margin-right: 20rpx;
+}
+
+.label_1 {
+  display: inline-block;
+  text-align: center;
+  background: #0da297;
+  border: 2rpx solid #0da297;
+  color: #fff;
+  font-size: 24rpx;
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+
+.default {
+  margin-top: 90rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+  height: 30rpx;
+  line-height: 30rpx;
+  position: relative;
+}
+
+.default icon {
+  margin-left: -56rpx;
+  position: absolute;
+  top: 5rpx;
+  width: 70rpx;
+  height: 40rpx;
+}
+
+.buttom {
+  margin-top: 234rpx;
+}
+
+.buttom button {
+  width: 520rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  color: #fff;
+  background: #0da297;
+  border-radius: 36rpx;
+  font-size: 32rpx;
+}
+
+button::after {
+  border: none;
+}
+.tips{
+  text-align: center;
+  margin-top: 60rpx;
+  color: #ff0303;
+  font-size: 32rpx;
+}

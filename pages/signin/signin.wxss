@@ -1,0 +1,392 @@
+page {
+  background: #f2f3f7;
+}
+
+.all {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.top {
+  position: relative;
+  height: 420rpx;
+  width: 100%;
+  background: url("https://api.cd1a.cn/imges/background.png");
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+.top_title {
+  position: absolute;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #fff;
+  top: 62rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.top_tip {
+  position: absolute;
+  font-size: 80rpx;
+  color: #fff;
+  line-height: 80rpx;
+  top: 119rpx;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+}
+
+.top_tip text {
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 28rpx;
+  font-weight: 300;
+}
+
+.top_rule {
+  position: absolute;
+  height: 32rpx;
+  font-size: 20rpx;
+  border-radius: 16rpx 0 0 16rpx;
+  line-height: 32rpx;
+  width: 112rpx;
+  padding: 0;
+  background-color: #ffd819;
+  color: #111;
+  top: 165rpx;
+  right: 0;
+}
+
+.record {
+  width: calc(100% - 48rpx);
+  background: #fff;
+  height: 238rpx;
+  border-radius: 24rpx;
+  box-shadow: 0 10rpx 10rpx rgba(0, 0, 0, 0.05);
+  margin-top: -150rpx;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 31rpx 0;
+}
+
+.record>view {
+  width: calc(100% - 50rpx);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.record view.sign_list {
+  flex: 1;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sign_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign_item_content {
+  height: 120rpx;
+  width: 80rpx;
+  background-color: #f5f6fa;
+  border-radius: 8rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sign_item_content text {
+  font-size: 20rpx;
+  line-height: 20rpx;
+  color: #999;
+  margin-top: 14rpx;
+}
+
+.sign_item_content view {
+  width: 60rpx;
+  height: 60rpx;
+  background: url("https://api.cd1a.cn/imges/sign_false.png") no-repeat;
+  background-size: 100%;
+  margin-top: 12rpx;
+}
+
+.sign_item_content view.sign_true {
+  background: url("https://api.cd1a.cn/imges/sign_true.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.sign_item_content view.sign_wait {
+  background: url("https://api.cd1a.cn/imges/sign_wait.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.sign_item_tip {
+  font-size: 20rpx;
+  line-height: 20rpx;
+  color: #666;
+  margin-top: 11rpx;
+}
+
+.record .exchange_tip {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #333;
+  flex: 1;
+}
+
+.record .exchange {
+  font-size: 22rpx;
+  line-height: 22rpx;
+  color: #3a62d7;
+}
+
+.content {
+  width: calc(100% - 48rpx);
+  flex-grow: 1;
+  height: 0rpx;
+  margin: 24rpx 0 50rpx 0;
+  border-radius: 24rpx;
+  box-shadow: 0 10rpx 10rpx rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.content .title {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #333;
+  margin: 32rpx 0 32rpx 26rpx;
+}
+
+.ticket_list {
+  width: 100%;
+  flex: 1;
+  background: #fff;
+  border-radius: 24rpx;
+  margin: 0 0 50rpx 0;
+}
+
+.ticket_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 28rpx 24rpx;
+}
+
+.ticket_item:first-child {
+  margin-top: 8rpx;
+}
+
+.item_img {
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid #e5e5e5;
+  margin-right: 24rpx;
+}
+
+.item_text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.item_text1 {
+  font-size: 26rpx;
+  color: #fa5252;
+}
+.item_text1.gray1{
+  color: #333;
+  font-size: 26rpx;
+}
+
+.item_text text:nth-child(2) {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.item_draw {
+  width: 88rpx;
+  height: 44rpx;
+  border-radius: 22rpx;
+  border: none;
+  background-image: linear-gradient(to right, #0da297, #26c494);
+  font-size: 22rpx;
+  color: #fff;
+  padding: 0;
+  line-height: 44rpx;
+  margin-left: 10rpx;
+}
+
+.item_draw.gray{
+  background:#E4E4E4;
+  color: #999;
+  border: none;
+}
+
+.item_draw.gray::after{
+  border: none;
+}
+
+/* 签到成功 */
+
+.mask {
+  background: #000;
+  opacity: 0.8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.success {
+  position: fixed;
+  top: 16%;
+  left: 50%;
+  margin-left: -280rpx;
+  width: 560rpx;
+  height: 680rpx;
+  background: #fff;
+  z-index: 5;
+  border-radius: 20rpx;
+  text-align: center;
+}
+.success .content{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top:150rpx;
+  color: #999999;
+  font-size: 24rpx;
+}
+
+.success .close{
+   width: 100%;
+   height: 100%;
+}
+
+.success .close image{
+  width: 100%;
+  height: 100%;
+}
+
+/* 夏日充值活动 */
+.RAall {
+  position: fixed;
+  z-index: 5;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-55%);
+  text-align: center;
+  left: 10%;
+}
+
+.RAall>view{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.RAall .RAbg {
+  z-index: 6;
+  width: 100%;
+  position: relative;
+}
+.RAcenter{
+  z-index: 7;
+  position: absolute;
+  bottom: 72rpx;
+}
+.RAall .RA50 {
+ height: 153rpx;
+}
+
+.RAall .RA50 image {
+  width: 440rpx;
+  height: 120rpx;
+}
+.RAall .close{
+  position: relative;
+  bottom: 0;
+}
+
+.RAall .close .close_text{
+  position: absolute;
+  bottom: 17rpx;
+  font-size: 24rpx;
+  color: #fff;
+  display: inline-block;
+  right: 50%;
+  transform: translateX(-50rpx);
+}
+.RAall .close image{
+  margin-top: 20rpx;
+  width: 70rpx;
+}
+.RA50_2 {
+  position: relative;
+  bottom: 138rpx;
+}
+
+.RA1_1 {
+  color: #66A504;
+  width: 40rpx;
+  height: 40rpx;
+  background: rgba(255, 243, 46, 1);
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 26rpx;
+}
+
+.RA1_2 {
+  color: #106248;
+  font-size: 64rpx;
+}
+
+.RA1_3 {
+  font-size: 38rpx;
+  color: rgba(16, 98, 72, 1);
+}
+
+.RA2 {
+  width: 360rpx;
+  height: 28rpx;
+  background: rgba(255, 255, 255, 1);
+  color: #333333;
+  font-size: 20rpx;
+  margin-left: 40rpx;
+}

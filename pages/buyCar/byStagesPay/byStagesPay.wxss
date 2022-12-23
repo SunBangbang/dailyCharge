@@ -1,0 +1,57 @@
+page {
+  background: url("https://api.cd1a.cn/imges/gchdbj2.png") no-repeat;
+  background-size: 100% 100%;
+  vertical-align: bottom;
+}
+
+.all {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 34rpx;
+  display: inline-block;
+  border-top: none;
+  border-bottom: none;
+  padding: 0 20rpx;
+  font-weight: bold;
+  margin-top: 93rpx;
+}
+
+.content {
+  color: #fff;
+  line-height: 44rpx;
+  font-size: 24rpx;
+  width: 100%;
+  margin-top: 35rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 100;
+}
+
+.content text {
+  display: block;
+  margin: 0 66rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.download_button[plain] {
+  margin-top: 210rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  width: 620rpx;
+  font-size: 32rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+}

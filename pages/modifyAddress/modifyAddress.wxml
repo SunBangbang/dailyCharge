@@ -1,0 +1,48 @@
+<view class='all'>
+  <view class='name'>
+    <view>收货人</view>
+    <view>
+      <input placeholder='请输入收货人姓名' placeholder-style='color:#999' bindinput='name' value='{{name_}}' maxlength='5'></input>
+    </view>
+  </view>
+  <view class='phone'>
+    <view>手机号码</view>
+    <view>
+      <input placeholder='请输入收货人电话' placeholder-style='color:#999' bindinput='phone' maxlength='11' value='{{phone}}'></input>
+    </view>
+  </view>
+  <view class='address'>
+    <view>所在地区</view>
+    <view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker {{region.length>0?'colorB':''}}">
+          {{region[0]?region[0]:"省"}}　{{region[1]?region[1]:"市"}}　{{region[2]?region[2]:"区"}}
+        </view>
+      </picker>
+    </view>
+    <view>
+      <image class="message_image" src="https://api.cd1a.cn/imges/choice.png" mode="widthFix"></image>
+    </view>
+  </view>
+  <view class='detailed'>
+    <view>详细地址</view>
+    <view>
+      <textarea class="textArea" placeholder='所在街道、楼牌号等' placeholder-style='color:#999' bindinput='detailed' value='{{detailed}}'></textarea>
+    </view>
+  </view>
+  <view class='label'>
+    <view>标签</view>
+    <view>
+      <text wx:for='{{allLabel}}' wx:key='{{idx}}' class="label_ {{item.id==label?'label_1':'label_'}}" bindtap='label' data-label='{{item.id}}'>{{item.name}}</text>
+    </view>
+  </view>
+  <view class='default'>
+    <icon type="success" size='14' color='{{defaults == false ? "#b2b2b2" : "#0da297"}}' bindtap='icon' />
+    <text>设为默认收货地址</text>
+  </view>
+  <view class='buttom'>
+    <form bindsubmit="preservation" report-submit="true" bindreset="formReset">
+      <button formType="submit">保存</button>
+    </form>
+  </view>
+</view>

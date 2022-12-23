@@ -1,0 +1,96 @@
+<view>
+  <view>
+    <image class="top" src="{{imgUrl}}"></image>
+  </view>
+  <view class="content" style="top: {{imgUrl ? height : 0}}rpx;" >
+    <view class="content_nav">
+      <view class="content_nav_1">
+        <view class="{{check_index == 0 ? 'nav_check':''}}" id="nav_0" bindtap="navClick">商品列表</view>
+      </view>
+      <view class="content_nav_line"></view>
+      <view class="content_nav_2">
+        <view class="{{check_index == 1 ? 'nav_check':''}}" id="nav_1" bindtap="navClick">购买记录</view>
+      </view>
+    </view>
+    <!-- 商品列表 -->
+    <view class="content_goods {{check_index == 1?'right100':''}}">
+      <scroll-view class="goods" scroll-y="false" bindscroll="scrollFun" bindscrolltolower="loadMore">
+        <view class="goods_con">
+          <view class="goods_item" bindtap='commodityDetail' data-index="{{index}}" wx:for="{{goods_list}}"
+            wx:key="index">
+            <view class="goods_item_content">
+              <view class="goods_item_img">
+                <image src="{{item.thumbnail}}"></image>
+              </view>
+              <view class="goods_item_introduce">
+                <text class="goods_name">{{item.title}} {{item.word}}</text>
+                <text class="goods_synopsis">{{item.sketch}}</text>
+                <text class="goods_grade">￥:<text class="goods_grade_num">{{item.price}}</text></text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="notMoer1" wx:if="{{!is_length}}">没有更多</view>
+      </scroll-view>
+    </view>
+    <!-- 购买记录 -->
+    <view class="content_goods1 {{check_index == 0?'left100':''}}">
+      <scroll-view class="goods" scroll-y="false" bindscroll="scrollFun" bindscrolltolower="loadMore">
+        <view class="goods1_con">
+          <view class='content_goods_' wx:for="{{record_data}}" data-index="{{index}}" wx:key="index">
+            <view class='detailed'>
+              <image class="car_img" src="{{item.img_url}}"></image>
+              <view class="right_details">
+                <view style="margin-bottom:5rpx;">{{item.goods_title}} {{item.word.length > 6 ? '...' : item.word}}</view>
+                <view style="margin-bottom:5rpx;">型号: {{item.spec.xinghao}}</view>
+                <view class="car_right">
+                  <p style="margin-right:5px">颜色:</p><span>{{item.spec.color}}</span>
+                  <p style="margin:0 5px 0 30px">数量:</p><span>x{{item.num}}</span>
+                </view>
+                <view style="margin-bottom:5rpx;color:#FD0303;font-size:12px;">金额: <span style="font-size: 10px;">￥</span>{{item.money}}</view>
+                <view class="progres" wx:if="{{record_data[index].status == 1}}" bindtap="certain" data-index="{{index}}">
+                  确认收货
+                </view>
+                <view class="progress" wx:if="{{record_data[index].status}}" bindtap="pro_detail" data-index="{{index}}">
+                  查看进度
+                </view>
+                <view wx:if="{{record_data[index].status == 2}}" class="finshed">
+                  已完成
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="notMoer2" wx:if="{{!is_length}}">没有更多</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="mask" wx:if="{{mask}}"></view>
+  <view class="detail_box" wx:if="{{mask}}">
+    <view class="progress_content">
+      <view class="left">
+        <view wx:if="{{progress_data.length == 3}}" class="circle_">3</view>
+        <view wx:if="{{progress_data.length == 2 || progress_data.length == 3}}" class="circle_">2</view>
+        <view wx:if="{{progress_data.length == 1 || progress_data.length == 2 || progress_data.length == 3}}" class="circle_">1</view>
+      </view>
+      <view class="center">
+        <view class="father a1" wx:if="{{progress_data.length == 1 || progress_data.length == 2 || progress_data.length == 3}}">
+          <view class="c1" wx:if="{{progress_data.length == 1 || progress_data.length == 2 || progress_data.length == 3}}"></view>
+        </view>
+        <view class="father a2" wx:if="{{progress_data.length == 2 || progress_data.length == 3}}">
+          <view class="c2" wx:if="{{progress_data.length == 2 || progress_data.length == 3}}"></view>
+        </view>
+        <view class="father a3" wx:if="{{progress_data.length == 3}}">
+          <view class="c3" wx:if="{{progress_data.length == 3}}"></view>
+        </view>
+      </view>
+      <view class="right">
+        <view class="first" wx:for="{{progress_data}}" data-index="{{index}}" wx:key="index">
+          <view class="time">{{item.time}}</view>
+          <view class="location" bindtap="telephone" data-index="{{index}}">{{item.status}}</view>
+        </view>
+      </view>
+    </view>
+    <button bindtap="confirm">确定</button>
+  </view>
+</view>

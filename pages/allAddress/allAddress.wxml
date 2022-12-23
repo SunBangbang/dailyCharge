@@ -1,0 +1,28 @@
+<view class='all'>
+  <scroll-view class="address_list" scroll-y="true">
+    <view class="address" wx:for="{{data}}" wx:key="index" data-index="{{index}}" bindtap="checkAddress" data-id='{{item.id}}'>
+      <image class="address_select" src='https://api.cd1a.cn/imges/selection.png' mode="widthFix" wx:if="{{isDex?dex_addr_id == item.addr_id:select_index == index }}"></image>
+      <view class="address_content">
+        <view class="address_top">
+          <text class="address_name">{{item.consignee}}</text>
+          <text class="address_phone">{{item.phone}}</text>
+          <text class="address_tip default" wx:if="{{item.default_addr == 2}}">默认</text>
+          <text class="address_tip" wx:if='{{item.tab==1}}'>公司</text>
+          <text class="address_tip" wx:if='{{item.tab==2}}'>家</text>
+          <text class="address_tip" wx:if='{{item.tab==3}}'>学校</text>
+          <text class="address_tip" wx:if='{{item.tab==4}}'>其他</text>
+
+        </view>
+        <view class="address_bottom">
+          <text class="address_address">{{item.area}} {{item.address}}</text>
+        </view>
+      </view>
+      <image class="address_edit" src='https://api.cd1a.cn/imges/modify.png' mode="widthFix" catchtap='modifyAddress' data-id='{{item.addr_id}}'></image>
+            <image class="address_delete" src='https://api.cd1a.cn/imges/delete.png' mode="widthFix" catchtap='modifyDelete' data-id='{{item.addr_id}}'></image>
+    </view>
+  </scroll-view>
+  <view class="bottom">
+    <button class="address_add" catchtap='newAddress'>
+      <view class="add_img"></view>新建收货地址</button>
+  </view>
+</view>

@@ -1,0 +1,92 @@
+<view class='all'>
+	<!-- 个人信息 -->
+	<view class='personal_top'>
+		<view class='personal_url'>
+			<view class='personal_img'>
+				<image src='{{data.avatarUrl}}' type="userNickName" mode='widthFix'></image>
+			</view>
+			<view class='personal_deil'>
+				<view class='id'>
+					{{data.nickName}}
+				</view>
+			</view>
+			<view class='recharge'>
+				<text bindtap='signin'>用户登录</text>
+			</view>
+		</view>
+	</view>
+	<!-- 白色展示 -->
+	<view class='personal_mask'>
+		<view class='personal_con'>
+			<view class='user'>
+				<view>天天币</view>
+				<view class="{{data.money.length<9?'font':'fontHover'}}">0</view>
+			</view>
+			<view class='box'></view>
+			<view class='user'>
+				<view>赠币</view>
+				<view class="{{data.currency.length<9?'font':'fontHover'}}">0</view>
+			</view>
+			<view class='box1'></view>
+			<view class='user'>
+				<view>积分余额</view>
+				<view class="{{data.integration.length<9?'font':'fontHover'}}">0</view>
+			</view>
+		</view>
+		<view class='message'>{{data.consumption_describe}}</view>
+	</view>
+
+	<!-- 导航 -->
+	<view class='navigtion'>
+		<view class='icon' wx:for='{{nav}}' wx:key='idx' wx:for-index="idx" data-index='{{idx}}' bindtap='navigtion'>
+			<image src='{{item.img}}' mode='widthFix'></image>
+			<view>{{item.name}}</view>
+		</view>
+	</view>
+  
+	<!-- 活动充值 -->
+	<view class="Arecharge">
+		<view class="exhibition">
+			<view class="etitle">
+				<view class="title">
+					<span></span>
+					<span>特惠套餐</span>
+				</view>
+			</view>
+			<view class="img" bindtap='navigtion'>
+				<image src='{{data.ad_card_img}}'></image>
+			</view>
+		</view>
+		<view class="exhibition">
+			<view class="etitle">
+				<view class="title">
+					<span></span>
+					<span>充值中心</span>
+				</view>
+			</view>
+			<view class="img" bindtap='navigtion'>
+				<image src='{{data.ad_pay_img}}'></image>
+			</view>
+		</view>
+
+	</view>
+	<!-- 轮播 -->
+	<view class='swiper' bindtap='navigtion'>
+		<swiper autoplay="true" interval="2000" circular='true'>
+			<block wx:for="{{data.active}}" wx:key='idx'>
+				<swiper-item>
+					<image src="{{item.img}}" class="slide-image" width="355" height="150" data-index='{{item.uid}}' />
+				</swiper-item>
+			</block>
+		</swiper>
+  </view>
+  
+
+	<!-- end -->
+	<view class='bottom'>
+		<view class='title' bindtap='mobie' style='text-align:left'>
+			<text>全国客服电话   </text>
+			<text>400-688-8919</text>
+		</view>
+	</view>
+</view>

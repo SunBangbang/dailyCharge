@@ -1,0 +1,35 @@
+<!--用户授权页面-->
+	<!--垂直滚动，这里必须设置高度-->
+	<scroll-view scroll-y="true" style="height:70vh;border-bottom:4rpx solid #efefef ">
+		<view class='rich'>
+			<rich-text nodes="{{nodes}}"></rich-text>
+		</view>
+	</scroll-view>
+
+	<!-- 单选框 -->
+	<!-- <view class='content'>
+		<view>
+			<checkbox-group bindchange="checkbox">
+        <view class='check-box'>
+          <checkbox value="0" />请认真阅读用户协议
+        </view>
+      </checkbox-group>
+		</view>
+	</view> -->
+	<!-- <view class="mask" wx:if='{{mask}}' bindtap="jump" id="video_mask"></view>
+	<view class="video" wx:if='{{mask}}'>
+		<video src="{{data.video}}" autoplay='true' bindended='bindEnded' id="video_content"></video>
+	</view>
+	<view class="jump" bindtap="jump" style="top:{{jumpTop}}px" wx:if="{{jumpTop>0 && mask}}">跳过→</view> -->
+	<!-- 授权 -->
+	<!-- <button type='primary' wx:if='{{check==0}}' bindtap='sure'>
+       确定同意协议
+  </button> -->
+	<button  wx:if="{{data.switch_on != 2}}" class="button" type='primary' bindtap="getUserProfile">
+		确定同意协议
+	</button>
+	<view class="agree" wx:if="{{data.switch_on == 2}}">
+		<input type="text" placeholder="请输入您的账户" bindinput="account" />
+		<input type="text" placeholder="请输入您的密码" bindinput="password" />
+		<button class="aprove" type='primary' bindtap="confirm">确定同意协议</button>
+	</view>

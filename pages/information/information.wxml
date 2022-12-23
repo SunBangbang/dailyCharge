@@ -1,0 +1,13 @@
+<view class='all'>
+  <view class='phone'>
+    <view>手机号码</view>
+    <view>{{data.phone}}</view>
+  </view>
+  <view class='addess'>
+    <view>收货信息</view>
+    <view bindtap='addess'>
+      <text>{{data.area}}{{data.address}}</text>
+      <image mode='widthFix' class='right' src='https://api.cd1a.cn/imges/right_.png'></image>
+    </view>
+  </view>
+</view>

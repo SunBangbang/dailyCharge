@@ -1,0 +1,58 @@
+.view1 {
+  transition: 0.5s;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 54rpx;
+}
+
+.view1 .title {
+  color: rgb(51, 51, 51);
+  font-size: 34rpx;
+  display: inline-block;
+  height: 28rpx;
+  line-height: 24rpx;
+  border: 4rpx solid rgb(0, 194, 95);
+  border-top: none;
+  border-bottom: none;
+  padding: 0 20rpx;
+  font-weight: bold;
+}
+
+
+
+.view1 .content {
+  margin-top: 68rpx;
+}
+
+.view2 .content {
+  text-align: center;
+  width: 100%;
+  margin-top: 64rpx;
+  line-height: 48rpx;
+}
+
+.view2 .content text {
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+image {
+  width: 620rpx;
+  height: 280rpx;
+}
+
+.view3 {
+  margin-top: 246rpx;
+}
+
+button {
+  background: rgb(0, 194, 95);
+  border-radius: 16rpx;
+  border: none;
+  color: #fff;
+  font-size: 32rpx;
+  width: 620rpx;
+  height: 88rpx;
+}

@@ -1,0 +1,24 @@
+<view class="view1">
+	<view class="title">车型您来选，价格我来砍</view>
+	<view class="content">请根据提示填写信息，我们将在24小时内向您提交最低报价</view>
+</view>
+
+<view class="view2">
+	<view class="title">提交信息</view>
+	<view class="content">
+		<view class="ipt"><label>姓 名 :</label><input bindinput='name' value="{{name}}" /></view>
+		<view class="ipt"><label>电 话 :</label><input bindinput='mobie' value="{{mobie}}" maxlength="11" /></view>
+		<view class="ipt"><label>品 牌 :</label><input bindinput='brand' value="{{brand}}" /></view>
+		<view class="ipt"><label>型 号 :</label><input bindinput='model' value="{{model}}" /></view>
+		<view class="ipt"><label>选择地区 :</label>
+			<picker mode="region" bindchange="bindRegionChange" value="{{detailed}}" custom-item="{{customItem}}" name="detailed">
+				<view class="picker {{clas}}">{{detailed}}</view>
+			</picker>
+		</view>
+	</view>
+</view>
+<view class="view3">
+	<button type='primary' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+		确定
+	</button>
+</view>

@@ -1,0 +1,163 @@
+page {
+  background-size: 100% 100%;
+}
+
+.all {
+  height: 100vh;
+}
+
+.title {
+  color: #fff;
+  font-size: 34rpx;
+  display: inline-block;
+  height: 28rpx;
+  line-height: 24rpx;
+  border: 4rpx solid #ffe734;
+  border-top: none;
+  border-bottom: none;
+  padding: 0 20rpx;
+  font-weight: bold;
+  margin-top: 90rpx;
+}
+
+.view2 .content {
+  color: #fff;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  width: 100%;
+  margin-top: 59rpx;
+  font-weight: 100;
+  position: relative;
+}
+
+.view2 .content text {
+  display: block;
+  margin: 20rpx 66rpx;
+}
+
+.view2 {
+  transition: 0.5s;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 98rpx;
+}
+
+.view1 .content {
+  color: #fff;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  width: 100%;
+  margin-top: 16rpx;
+}
+
+.view1 .content button {
+  margin: 0 65rpx;
+  margin-top: 45rpx;
+  height: 88rpx;
+  line-height: 84rpx;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 0;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.view1 .content button.check {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.view1 .content button::after {
+  border: none;
+}
+
+.view1 .content button.next {
+  border: none;
+  margin-top: 70rpx;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.view1 {
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 98rpx;
+}
+
+.bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 98rpx;
+  display: flex;
+  align-items: center;
+  background-color: #3c3e42;
+}
+
+.bottom_line {
+  width: 1rpx;
+  height: 80rpx;
+  background-color: #999;
+}
+
+.bottom button {
+  flex: 1;
+  width: 0rpx;
+  height: 100%;
+  line-height: 98rpx;
+  color: #999;
+  background-color: #3c3e42;
+  font-size: 32rpx;
+  border-radius: 0;
+}
+
+.bottom button.checkNav {
+  color: #fff;
+}
+
+.bottom button::after {
+  border: none;
+}
+
+.left100 {
+  transition: 0.5s;
+  left: 100%;
+  right: -100%;
+}
+
+.right100 {
+  transition: 0.5s;
+  left: -100%;
+  right: 100%;
+}
+
+.all_map {
+  width: 100%;
+  text-align: center;
+  margin-top: 88rpx auto 0 auto;
+  position: absolute;
+  top: 750rpx;
+  /* padding-bottom: 200rpx; */
+}
+
+/* .map {
+  color: #fff;
+  width: 100%;
+  font-size: 22rpx;
+  line-height: 44rpx;
+    left: 66rpx;
+} */

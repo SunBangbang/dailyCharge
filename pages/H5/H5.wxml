@@ -1,0 +1,18 @@
+  <view class="view1">
+  	<view class="title">支付定金</view>
+  	<view class="content">
+  		<image src='https://api.cd1a.cn/imges/CPD.png' mode="widthFix"></image>
+  	</view>
+  </view>
+  <view class="view2">
+  	<view class="content">
+    <text>支付定金后，请根据通知</text>
+    <text>线上支付剩余款项</text>
+    <text>或在约定提车时现场缴纳剩余款项</text>
+    </view>
+  </view>
+  <view class="view3" wx:if='{{course!=3}}'>
+  	<button type='primary' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+  		确定
+  	</button>
+  </view>

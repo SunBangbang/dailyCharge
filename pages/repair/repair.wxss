@@ -1,0 +1,121 @@
+.repair_top {
+  font-size: 28rpx;
+  color: #333;
+  margin: 54rpx 24rpx;
+}
+
+.repair_top1 {
+  font-size: 28rpx;
+  color: #333;
+  margin: 54rpx 24rpx;
+}
+.equipment text{
+  float: left;
+  margin-top: 6rpx;
+}
+.equipment input{
+  margin-right: 60rpx;
+  padding-left: 20rpx;
+}
+.city{
+  margin-top: 36rpx;
+}
+.city text{
+  float: left;
+  margin-top: 6rpx;
+}
+.city input{
+  margin-right: 60rpx;
+  padding-left: 20rpx;
+}
+.repair_top view {
+  margin-bottom: 62rpx
+}
+
+.are {
+  margin-top: 32rpx;
+  padding: 24rpx;
+  border: 2rpx solid #efefef;
+  border-radius: 8rpx;
+  height: 162rpx;
+  line-height: 1.5;
+}
+
+.areas {
+  width: 100%;
+  height: 100%;
+}
+
+.currentWordNumber {
+  font-size: 28rpx;
+  color: gray;
+  position: absolute;
+  right: 0rpx;
+  bottom: -10rpx;
+}
+
+.repair_center .phone image {
+  width: 64rpx;
+  height: 64rpx;
+  float: left;
+}
+
+.phone {
+  margin-left: 24rpx;
+}
+
+.phone view {
+  display: flex;
+  border-bottom: 2rpx solid #efefef;
+  padding-bottom: 10rpx;
+  padding-top: 8rpx;
+  margin-left: 86rpx;
+  margin-right: 24rpx;
+}
+
+.phone .placeholder {
+  color: #999;
+  font-size: 24rpx;
+  font-weight: 400;
+}
+
+.phone input {
+  float: left;
+  color: #333;
+  font-size: 40rpx;
+  flex: 1;
+  font-weight: 400;
+}
+
+.phone button {
+  color: #0da297;
+  font-size: 24rpx;
+  flex: 1;
+  text-align: right;
+  background: #fff;
+  height: 56rpx;
+  line-height: 56rpx;
+}
+
+.phone button.tGray {
+  color: #999;
+}
+
+button::after {
+  border: 0;
+}
+
+.phone:nth-child(2) {
+  margin-top: 76rpx;
+}
+
+.repair_bottom {
+  margin: 150rpx 176rpx 162rpx 176rpx;
+}
+
+.repair_bottom button {
+  background: #0da297;
+  font-size: 32rpx;
+  border-radius: 36rpx;
+  color: #fff;
+}

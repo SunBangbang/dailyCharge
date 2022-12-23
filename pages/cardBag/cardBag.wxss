@@ -1,0 +1,297 @@
+page {
+  background: #f4f4f4;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.top_nav {
+  height: 96rpx;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.top_nav_line {
+  width: 2rpx;
+  height: 68rpx;
+  background: #efefef;
+}
+
+.top_nav_1,
+.top_nav_2 {
+  flex: 1 0 0;
+  height: 100%;
+  text-align: center;
+}
+
+.top_nav_1 view,
+.top_nav_2 view {
+  font-size: 26rpx;
+  line-height: 88rpx;
+  display: inline-block;
+  border-top: 4rpx solid #fff;
+  border-bottom: 4rpx solid #999;
+}
+
+.top_nav_1 view.nav_check,
+.top_nav_2 view.nav_check {
+  color: #0da297;
+  border-bottom: 4rpx solid #0da297;
+}
+
+.nav_check {
+  color: #0da297;
+}
+
+.content {
+  transition: 0.5s;
+  padding: 6rpx 24rpx;
+  position: fixed;
+  top: 98rpx;
+  left: 0;
+  right: 0;
+  bottom: 4rpx;
+}
+
+.card_list {
+  height: 100%;
+}
+
+
+.card1 {
+  background: linear-gradient(to left, #e81959, #fd3774);
+  position: relative;
+}
+
+.card1 .card_img {
+  position: absolute;
+  top: 34rpx;
+  left: 34rpx;
+  bottom: 34rpx;
+  width: 260rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.card1 .card_img image {
+  width: 100%;
+}
+
+.card1 .card_explain {
+  position: absolute;
+  font-size: 33rpx;
+  color: #fff;
+  right: 14rpx;
+  top: 14rpx;
+}
+
+.card1 .card_explain text {
+  font-size: 59rpx;
+  color: #ffd200;
+}
+
+.card1 .card_button {
+  position: absolute;
+  border-radius: 18rpx;
+  font-size: 20rpx;
+  border: 1rpx solid #fff;
+  height: 36rpx;
+  width: 100rpx;
+  text-align: center;
+  line-height: 36rpx;
+  color: #fff;
+  bottom: 17rpx;
+  right: 14rpx;
+}
+
+.card_item:nth-child(1){
+  margin-top: 20rpx;
+}
+.card_item {
+  position: relative;
+  color: #fff;
+  margin: 40rpx 0;
+  height: 220rpx;
+  border-radius: 14rpx;
+}
+
+.card2 image {
+  width: 100%;
+  height: 240rpx;
+}
+
+.card_type {
+  font-size: 26rpx;
+  position: absolute;
+  top: 29rpx;
+  left: 14rpx;
+}
+
+.card_cost {
+  font-size: 24rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 16rpx;
+}
+
+.card_cost text:nth-child(1) {
+  font-size: 28rpx;
+}
+
+.card_cost text:nth-child(2) {
+  font-size: 110rpx;
+}
+
+.card_tip {
+  font-size: 20rpx;
+  position: absolute;
+  bottom: 0;
+  left: 14rpx;
+}
+
+.card_button {
+  position: absolute;
+  border-radius: 18rpx;
+  font-size: 20rpx;
+  border: 1rpx solid #fff;
+  height: 36rpx;
+  width: 100rpx;
+  text-align: center;
+  line-height: 36rpx;
+  color: #fff;
+  bottom: 17rpx;
+  right: 14rpx;
+}
+
+.content1 {
+  transition: 0.5s;
+  padding: 14rpx 24rpx;
+  position: fixed;
+  top: 98rpx;
+  left: 0;
+  right: 0;
+  bottom: 4rpx;
+}
+
+.left100 {
+  transition: 0.5s;
+  left: 100%;
+  right: -100%;
+}
+
+.right100 {
+  transition: 0.5s;
+  right: 100%;
+  left: -100%;
+}
+
+.mcard {
+  padding: 6rpx 0;
+  position: relative;
+}
+
+.mcard_background {
+  width: 100%;
+}
+
+.mcard_content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.mcard_price {
+  position: absolute;
+  right: 22rpx;
+  top: 109rpx;
+  color: #fff;
+}
+.mcard_price1 {
+  position: absolute;
+  left: 32rpx;
+  bottom: 80rpx;
+  color: #fff;
+}
+
+.mcard_price1 .mcard_price_num {
+  font-size: 36rpx;
+}
+.mcard_price_num {
+  font-size: 20rpx;
+}
+
+.mcard_price_state {
+  position: absolute;
+  right: 10rpx;
+  bottom: 30%;
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  line-height: 36rpx;
+  padding: 0 20rpx;
+  border: 2rpx solid #fff;
+}
+
+.mcard_tip {
+  position: absolute;
+  left: 20rpx;
+  bottom: 31%;
+  color: #fff;
+  font-size: 20rpx;
+  white-space: nowrap;
+}
+
+.mcard_date {
+  position: absolute;
+  left: 34rpx;
+  bottom: 36rpx;
+  color: #fff;
+  font-size: 20rpx;
+  white-space: nowrap;
+}
+
+/* 会员 */
+.member_top {
+  border-bottom: 2rpx solid #efefef;
+  position: relative;
+  margin-top: 20rpx;
+}
+
+.top_img {
+  position: relative;
+}
+
+.member_top image {
+  width: 702rpx;
+  height: 396rpx;
+
+}
+
+.member_top .money {
+  font-size: 60rpx;
+  color: #9b8442;
+  position: absolute;
+  right: 32rpx;
+  top: 34rpx;
+}
+
+.member_top .money text {
+  font-size: 24rpx;
+  padding-right: 8rpx;
+}
+
+.detail {
+  color: #998443;
+  font-size: 22rpx;
+  position: absolute;
+  left: 40rpx;
+  top: 346rpx;
+}

@@ -1,0 +1,94 @@
+<view class="all">
+	<view class='slide-head'>
+		<swiper autoplay="true" interval="2000" circular='true'>
+			<block wx:for="{{carousel_first}}" wx:key='idx' wx:for-index="idx">
+				<swiper-item>
+					<image style="width: 100%; height: 160rpx;" src="{{item.img}}" class="slide-image" bindtap="first"
+						data-index='{{idx}}' />
+				</swiper-item>
+				<button wx:if="{{item.type == 6}}" style="opacity: 0; height: 160rpx;" show-message-card="true"
+					send-message-title="粉丝团" send-message-path="../index/index" session-from="粉丝团" open-type='contact'></button>
+			</block>
+		</swiper>
+	</view>
+
+	<!-- <view class="message">
+    <image class="message_image" src="https://api.cd1a.cn/imges/propmt.png" mode="widthFix"></image>
+    <text class="message_text">****信息*********************</text>
+  </view> -->
+
+	<view wx:if="{{is_corona != 2}}">
+		<view class='progress_box'>
+			<canvas class="progress_bg" canvas-id="canvasProgressbg"></canvas>
+			<canvas class="progress_canvas" canvas-id="canvasProgress"></canvas>
+			<view class="progress_text">
+				<text class='progress_info'> {{ progress_date }}</text>
+				<text class='progress_tip' wx:if="{{full_stop == 2}}">已充电时间</text>
+				<text class='progress_tip' wx:else>距离充电结束还有</text>
+			</view>
+		</view>
+
+		<view class="buttons">
+			<form bindsubmit="align" report-submit="true" bindreset="formReset">
+				<button formType="submit" class='align_charge'>返回首页</button>
+			</form>
+			<form bindsubmit="repair" class='align_charge' report-submit="true" bindreset="formReset">
+				<button formType="submit" class='deviec_repair'>设备报修</button>
+			</form>
+			<form wx:if="{{plug_remind == 2}}" bindsubmit="stop" class='align_charge' report-submit="true"
+				bindreset="formReset">
+				<button formType="submit" class='deviec_repair'>结束充电</button>
+			</form>
+		</view>
+	</view>
+
+	<view class='slide-bottom'>
+		<swiper autoplay="true" interval="2000" circular='true'>
+			<block wx:for="{{carousel_two}}" wx:key='ix' wx:for-index="ix">
+				<swiper-item>
+					<image style="width: 100%; height: 160rpx;" bindtap="two" src="{{item.img}}" class="slide-image"
+						data-index='{{ix}}' />
+				</swiper-item>
+				<button wx:if="{{item.type == 6}}" style="opacity: 0; height: 160rpx;" show-message-card="true"
+					send-message-title="粉丝团" send-message-path="../index/index" session-from="粉丝团" open-type='contact'></button>
+			</block>
+		</swiper>
+	</view>
+
+	<!-- <view class='content'></view> -->
+
+	<cover-view class="message" wx:if='{{mask && img}}'>
+		<cover-view class="mask" wx:if='{{mask && img}}'></cover-view>
+		<cover-image class="cover_image" bindtap="shop_mall" src="{{img}}" wx:if='{{mask}}'></cover-image>
+		<cover-view class="receive" wx:if='{{mask}}' wx:if="{{type == 6}}">
+			<button class="download" show-message-card="true" send-message-title="粉丝团" send-message-path="../index/index"
+				session-from="粉丝团" open-type='contact'>参加活动</button>
+		</cover-view>
+		<cover-view class="close" bindtap="off" wx:if="{{type != 5}}" wx:if='{{mask && img}}'>关闭
+		</cover-view>
+		<cover-view class="sure" wx:if="{{type == 5}}" bindtap="close">{{takeTime>0?takeTime:'确定'}}</cover-view>
+	</cover-view>
+
+	<view class="mask" wx:if="{{activity && is_corona == 2}}"></view>
+	<view wx:if="{{activity && is_corona == 2}}">
+		<image bindtap="start" class="point" src="{{activity_data.pointer_img}}"></image>
+		<image class="circle" animation="{{animationData}}" src="{{activity_data.gift_img}}"></image>
+		<image class="borther" src="{{activity_data.background_img}}"></image>
+		<image class="firework" src="{{activity_data.aura_img}}"></image>
+		<image class="title" src="{{activity_data.title_img}}"></image>
+		<view class="show_off" bindtap="show_close" wx:if="{{is_start}}">确定</view>
+	</view>
+
+
+	<!-- <cover-view class="message" wx:if='{{get_coupon == 2 && mask}}'>
+		<cover-view class="mask" wx:if='{{mask}}'></cover-view>
+		<cover-image src="{{data.data.coupon_img}}" wx:if='{{mask}}'></cover-image>
+		<cover-view class="sure" bindtap="close">{{takeTime>0?takeTime:'确定'}}</cover-view>
+	</cover-view> -->
+
+	<!-- <cover-view class="message" wx:if='{{data.data.car_shop_ball == 2 && mask}}'>
+		<cover-view class="mask" wx:if='{{mask}}'></cover-view>
+		<cover-image class="cover_image" bindtap="shop_mall" src="{{data.data.car_shop_img}}" wx:if='{{mask}}'></cover-image>
+		<cover-view class="close" bindtap="off">关闭</cover-view>
+	</cover-view> -->
+</view>

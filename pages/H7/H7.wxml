@@ -1,0 +1,23 @@
+<view class="view1">
+	<view class="title">{{merchant}}</view>
+</view>
+<view class="view11">
+	<view class="title">请输入付款信息</view>
+</view>
+<view class="view2">
+	<view class="content">
+		<view class="c1"><text>金额</text><input style="font-size:96rpx; height:100rpx;" maxlength="4" bindinput="money" value="{{money}}"></input><text>元</text></view>
+		<view class="c1" style="position:relative; left:-20rpx;"><text>姓名</text><input bindinput="name" value="{{name}}"></input></view>
+		<view class="c1" style="position:relative; left:-45rpx;"><text>身份证号</text><input bindinput="idCard" value="{{idCard}}"></input></view>
+		<view class="c1" style="position:relative; left:-20rpx;"><text>电话</text><input bindinput="phone" value="{{phone}}"></input></view>
+		<view class="c1" style="position:relative; left:-20rpx;"><text>邮箱</text><input bindinput="eMail" value="{{eMail}}"></input></view>
+		<view class="c1" style="position:relative; left:-45rpx;"><text>车辆型号</text><input bindinput="type" value="{{type}}"></input></view>
+		<view class="c1" style="position:relative; left:-45rpx;"><text>车辆品牌</text><input bindinput="brand" value="{{brand}}"></input></view>
+		<view class="c2">确认无误后，点击下方按钮支付。</view>
+	</view>
+</view>
+<view class="view3">
+	<button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" wx:if='{{userid_locked==""}}'>获取授权</button>
+	<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if='{{userid_locked!=""&&phoneNumber==""}}'>获取手机号码</button>
+	<button bindtap="sure" wx:if='{{phoneNumber!=""&&phoneNumber!=""}}'>确定支付</button>
+</view>

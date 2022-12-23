@@ -1,0 +1,105 @@
+.wx_top {
+  margin: 42rpx 24rpx 30rpx 24rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.swiper {
+  height: 80px;
+}
+
+.swiper image {
+  width: 100%;
+  height: 160rpx;
+}
+
+.swiper button {
+  background: #fff;
+  padding: 0;
+  border-radius: 0;
+}
+
+.wx_center {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.wx_center button {
+  flex: 1;
+}
+
+.price {
+  display: inline-block;
+  border: 2rpx solid #0da297;
+  width: 218rpx;
+  border-radius: 8rpx;
+  background: #fff;
+  text-align: center;
+  color: #0da297;
+  margin-bottom: 24rpx;
+}
+
+.day_ {
+  height: 36rpx;
+  display: block;
+  font-size: 48rpx;
+}
+.day_ text{
+  font-size:20rpx;
+}
+.price_ {
+  margin-top: 48rpx;
+  display: block;
+  color: #666;
+  font-size: 24rpx;
+}
+.price1_ {
+  margin-top: 48rpx;
+  display: block;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.price1 {
+  display: inline-block;
+  width: 218rpx;
+  border-radius: 8rpx;
+  background: #0da297;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 24rpx;
+}
+
+.wx_bottom {
+  margin: 70rpx 24rpx 0 24rpx;
+}
+
+.wx_bottom button {
+  height: 88rpx;
+  line-height: 88rpx;
+  color: #fff;
+  background: #0da297;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+button::after {
+  border: none;
+}
+ image {
+  width: 100%;
+  height: 160rpx;
+}
+
+.rich {
+  padding: 20rpx;
+  line-height: 38rpx;
+  font-size: 28rpx;
+}
+
+.scroll-view {
+  margin: 15px auto;
+  height: 37vh;
+}

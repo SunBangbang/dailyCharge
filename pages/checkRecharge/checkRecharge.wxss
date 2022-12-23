@@ -1,0 +1,89 @@
+.view1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 54rpx;
+}
+
+.view1 .title {
+  color: rgb(51, 51, 51);
+  font-size: 36rpx;
+  font-weight: 500;
+}
+
+.view2 .content {
+  text-align: center;
+  width: 100%;
+  margin-top: 115rpx;
+}
+
+.view2 .c1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.view2 .c1 .ipt {
+  border-bottom: 2rpx solid rgb(153, 153, 153);
+  width: 320rpx;
+  font-size: 96rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: rgba(13, 162, 151, 1);
+}
+
+.view2 .c1 text {
+  margin-left: 10rpx;
+}
+
+.view2 .c2 {
+  color: rgb(153, 153, 153);
+  font-size: 22rpx;
+  margin-top: 40rpx;
+}
+
+image {
+  width: 620rpx;
+  height: 280rpx;
+}
+
+.view3 {
+  margin-top: 72rpx;
+}
+
+button {
+  border: none;
+  color: #fff;
+  font-size: 32rpx;
+  width: 480rpx;
+  height: 80rpx;
+  background: rgba(13, 162, 151, 1);
+  border-radius: 8rpx;
+  font-weight: 300;
+}
+
+.view4 {
+  width: 100%;
+  font-size: 22rpx;
+  font-weight: 400;
+  text-decoration: underline;
+  color: rgba(13, 162, 151, 1);
+  text-align: center;
+  margin-top: 92rpx;
+}
+
+.view5 {
+  width: 100%;
+  color: #E10D26;
+  font-size: 32rpx;
+  margin-top: 100rpx;
+  text-align: center;
+  font-weight: 600;
+  line-height: 52rpx;
+}
+
+.content1 {
+  font-size: 24rpx;
+  color: #666666;
+  font-weight: 300;
+}

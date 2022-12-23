@@ -1,0 +1,72 @@
+page {
+  background: #f4f4f4;
+}
+
+.all {
+  margin-top: 24rpx;
+  background: #fff;
+}
+
+/* 手机 */
+
+.phone {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 92rpx;
+  line-height: 92rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  margin: 0 24rpx;
+}
+
+.phone view:nth-child(1) {
+  flex: 1;
+  color: #333;
+  font-size: 26rpx;
+}
+
+.phone view:nth-child(2) {
+  flex: 1;
+  color: #666;
+  font-size: 26rpx;
+  text-align: right;
+}
+
+/* 地址 */
+
+.addess {
+  display: flex;
+  height: 92rpx;
+  line-height: 92rpx;
+  margin: 0 24rpx;
+}
+
+.addess view:nth-child(1) {
+  flex: 1;
+  color: #333;
+  font-size: 26rpx;
+}
+
+.addess view:nth-child(2) {
+  flex: 1;
+  max-width: 50%;
+  color: #666;
+  font-size: 26rpx;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.addess text {
+  height: 92rpx;
+  line-height: 92rpx;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.right {
+  width: 44rpx;
+}

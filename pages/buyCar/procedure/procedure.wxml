@@ -1,0 +1,25 @@
+<view class="all" style="  background: url({{back_img}})">
+  <!-- <view class="view1 {{nav_index == 0?'left100':''}}">
+    <view class="title">请选择您的付款方式</view>
+    <view class="content">
+      <button class="{{check_index == 0?'check':''}}" data-index="0" bindtap="checkMethod">分期付款(月供低至¥179.07)</button>
+      <button class="{{check_index == 1?'check':''}}" data-index="1" bindtap="checkMethod">一次性付款</button>
+      <button class="next" bindtap="next">确定</button>
+    </view>
+  </view> -->
+  <view class="view2 {{nav_index == 1?'right100':''}}">
+    <view class="title">购车流程</view>
+    <view class="content">
+      <text wx:for='{{data}}' wx:key='idx'>{{item}}</text>
+    </view>
+  </view>
+  <view class="all_map {{nav_index == 1?'right100':''}}">
+    <map bindtap='intoMap' longitude="108.908976" latitude="34.252727" scale="18" style="width:620rpx;height:340rpx;margin: 0 auto;">
+    </map>
+  </view>
+  <view class="bottom">
+    <button class="{{nav_index==1?'checkNav':''}}" data-index="0" bindtap="changeNav">购车流程</button>
+    <view class="bottom_line"></view>
+    <button class="{{nav_index==0?'checkNav':''}}" data-index="1" bindtap="changeNav">购买车辆</button>
+  </view>
+</view>

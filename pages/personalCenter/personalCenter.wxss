@@ -1,0 +1,360 @@
+/* 个人信息 */
+
+.personal_top {
+  height: 300rpx;
+  background: linear-gradient(#0da297, #3db8af);
+  padding: 0 24rpx;
+  position: relative;
+}
+
+.download_btn {
+  background: #26C494;  
+  color: #fff;
+}
+
+.download {
+  border-radius: 999px;
+  font-size: 26rpx;
+  text-align: center;
+  margin-top: 18rpx;
+  width: 240rpx;
+  z-index: 6;
+  position: fixed;
+  top: calc((100vh + 135px)/2);
+  left: calc((100% - 240rpx)/2);
+  letter-spacing: 1px;
+}
+
+.personal_url {
+  padding-top: 36rpx;
+  display: flex;
+}
+
+.personal_img image {
+  border-radius: 50%;
+  /* border: 10rpx solid red; */
+  width: 116rpx;
+  height: 116rpx !important;
+  flex-grow: 1;
+}
+
+.personal_url .personal_deil {
+  flex-grow: 2;
+  margin-left: 12rpx;
+  padding: 12rpx;
+}
+
+.personal_url .recharge {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.personal_deil .id {
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.personal_deil .id image {
+  width: 24rpx;
+  height: 26rpx;
+}
+
+.personal_deil .card text {
+  display: inline-block;
+  border-radius: 6rpx;
+  color: #fff;
+  padding: 0 10rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 18rpx;
+  border: 2rpx solid #fff;
+  text-align: center;
+  margin-right: 14rpx;
+  float: left;
+  margin-top: 28rpx;
+}
+
+.popup {
+  width: 75%;
+  height: 350px;
+  position: fixed;
+  top: calc((100vh - 410px)/2);
+  left: calc((100% - 75%)/2);
+  z-index: 6;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity: .7;
+  z-index: 4;
+}
+
+.recharge_ {
+  display: inline-block;
+  background: #ffae14;
+  color: #fff;
+  border-radius: 22rpx;
+  font-size: 26rpx;
+  width: 140rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  margin-top: 18rpx;
+}
+
+.personal_url .recharge text {
+  display: inline-block;
+  background: #ffae14;
+  color: #fff;
+  border-radius: 22rpx;
+  font-size: 26rpx;
+  width: 140rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  margin-top: 18rpx;
+}
+
+.close {
+  z-index: 6;
+  position: fixed;
+  top: calc((100vh + 325px)/2);
+  left: calc((100% - 10%)/2);
+  display: flex;
+  align-items: center;
+}
+
+.close_img {
+  width: 75rpx;
+  height: 75rpx;
+}
+
+/* 白色展示 */
+
+.personal_mask {
+  position: absolute;
+  top: 216rpx;
+  width: 100%;
+}
+
+.personal_mask .personal_con {
+  background: #fff;
+  margin: 0 24rpx;
+  height: 216rpx;
+  border-radius: 12rpx;
+  display: flex;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.personal_con view {
+  flex: 1;
+  text-align: center;
+}
+
+.personal_con .user {
+  margin: 44rpx 0 62rpx 0;
+}
+
+.personal_con .user .font{
+  text-align: center;
+  text-justify: newspaper;
+  word-break: break-all;
+  width: 235rpx;
+  margin-top: 8rpx;
+  font-size: 48rpx;
+  color: #333;
+  font-weight: bold;
+}
+.personal_con .user .fontHover{
+  text-align: center;
+  text-justify: newspaper;
+  word-break: break-all;
+  width: 235rpx;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #333;
+  font-weight: bold;
+}
+
+.personal_con .box {
+  position: absolute;
+  height: 128rpx;
+  border-right: 2rpx solid #efefef;
+  left: 234rpx;
+  margin-top: 27rpx;
+}
+
+.personal_con .box1 {
+  position: absolute;
+  height: 128rpx;
+  border-right: 2rpx solid #efefef;
+  right: 234rpx;
+  margin-top: 27rpx;
+}
+
+.personal_con .user:nth-last-child(1) {
+  border-right: 0;
+}
+
+.personal_con .user view:nth-child(1) {
+  font-size: 28rpx;
+  color: #333;
+}
+
+
+.message {
+  font-size: 20rpx;
+  color: rgb(17, 17, 17);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 20rpx;
+}
+
+/* 导航 */
+
+.navigtion {
+  margin-top: 140rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigtion .icon {
+  margin-top: 40rpx;
+  text-align: center;
+  font-size: 22rpx;
+  width: 20%;
+}
+
+.navigtion .icon image {
+  width: 88rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 活动充值 */
+
+.Arecharge {
+  display: flex;
+  padding: 0 24rpx;
+  margin-top: 46rpx;
+}
+
+.exhibition {
+  flex: 1;
+}
+
+.etitle {
+  display: flex;
+}
+
+.exhibition view {
+  flex: 1;
+}
+
+.exhibition .title {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: rgb(51, 51, 51);
+  text-align: left;
+}
+
+.exhibition:nth-child(1) .title span:nth-child(1) {
+  background: #0da297;
+  height: 32rpx;
+  line-height: 32rpx;
+  width: 4rpx;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 2rpx;
+  margin-right: 8rpx;
+}
+
+.exhibition:nth-child(2) .title span:nth-child(1) {
+  background: #0da297;
+  height: 32rpx;
+  line-height: 32rpx;
+  width: 4rpx;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 2rpx;
+  margin-right: 8rpx;
+  margin-left: 12rpx;
+}
+
+.exhibition:nth-child(1) .img {
+  width: 100%;
+  text-align: left;
+}
+
+.exhibition:nth-child(2) .img {
+  width: 100%;
+  text-align: right;
+}
+
+.Arecharge image {
+  width: 340rpx;
+  height: 140rpx;
+  margin-top: 20rpx;
+  border-radius: 16rpx;
+}
+
+.exhibition:nth-child(1) .more {
+  font-size: 22rpx;
+  color: rgb(198, 199, 200);
+  text-align: right;
+  padding-right: 14rpx;
+}
+
+.exhibition:nth-child(2) .more {
+  font-size: 22rpx;
+  color: rgb(198, 199, 200);
+  text-align: right;
+}
+
+/* 轮播 */
+
+.swiper {
+  margin-top: 46rpx;
+  height: 150rpx;
+}
+
+.swiper image {
+  width: 100%;
+  height: 160rpx;
+}
+
+.swiper button {
+  background: #fff;
+  padding: 0;
+  border-radius: 0;
+}
+
+button::after {
+  border: none;
+}
+
+/* end */
+
+.bottom {
+  display: flex;
+  font-size: 20rpx;
+  text-align: center;
+  padding: 48rpx 24rpx;
+}
+
+.bottom .title {
+  flex: 1;
+  color: #333;
+}
+
+.title text:nth-child(2) {
+  font-size: 20rpx;
+  color: #0da297;
+  text-align: right;
+}

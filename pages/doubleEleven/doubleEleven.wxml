@@ -1,0 +1,31 @@
+<view class="all">
+  <view class="_content">
+    <view class="remaining_time">
+      距离活动结束：{{remainingTime}}
+    </view>
+    <view class="remaining_people {{people_animate?'a':''}}">
+      活动名额仅剩{{remaining_people}}名
+    </view>
+    <view class="remaining_content">
+    
+        <image src='{{item.imges}}' wx:for='{{imageList}}' wx:key='{{idx}}' data-id="{{item.id}}" bindtap="mask_show" data-money="{{item.money}}"  mode='widthFix' ></image>
+      
+    </view>
+    <image class="content_img1" src='https://api.cd1a.cn/imges/Invitation_content5.png' mode="widthFix"></image>
+  </view>
+</view>
+
+<view wx:for="{{packetList}}" wx:for-index="index" wx:for-item="items" wx:key="index">
+  <image class="red-packet" src="{{items.src}}" style="position:fixed;top:{{items.top}}px;left:{{items.left}}px;-webkit-transition:{{items.speed}}ms linear 0ms;transition:{{items.speed}}ms linear 0ms">
+  </image>
+</view>
+<!-- 充值 -->
+<view class="mask" bindtap="mask_hidden" wx:if='{{mask}}'></view>
+<view class="recharge" wx:if='{{mask}}' catchtouchmove="ture">
+  <image src='https://api.cd1a.cn/imges/redEnvelopes.png' mode="widthFix" bindtap="imageList"></image>
+  <image src="https://api.cd1a.cn/imges/close.png" mode='widthFix' bindtap='mask_hidden'></image>
+  <view class="recharge_text">
+    <text>恭喜您</text>
+    <text>获得{{id}}赠币</text>
+  </view>
+</view>

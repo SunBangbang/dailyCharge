@@ -1,0 +1,87 @@
+/* 协议 */
+
+.rich {
+  padding: 20rpx;
+  line-height: 38rpx;
+}
+
+rich-text {
+  font-size: 20rpx;
+}
+
+/* 单选框 */
+
+.check-box {
+  font-size: 30rpx;
+  width: 400rpx;
+  padding: 30rpx 20rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+}
+
+/* 授权 */
+
+input {
+  border: 1rpx solid #efefef;
+  height: 85rpx;
+  margin: 10rpx 0;
+}
+
+.agree {
+  padding: 30rpx;
+}
+
+.button {
+  width: 702rpx;
+  color: #fff;
+  margin-top: 134rpx;
+}
+
+.aprove {
+  width: 702rpx;
+}
+
+/* mask video */
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.8;
+  background: #000;
+  z-index: 10;
+}
+
+.video {
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-55%);
+  text-align: center;
+}
+
+.video video {
+  z-index: 11;
+  height: 900rpx;
+  width: 100%;
+  position: relative;
+}
+
+.jump {
+  color: #fff;
+  position: fixed;
+  top: 30px;
+  right: 40rpx;
+  width: 150rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: right;
+  font-size: 46rpx;
+  z-index: 12;
+}

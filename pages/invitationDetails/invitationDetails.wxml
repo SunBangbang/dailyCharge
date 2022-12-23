@@ -1,0 +1,22 @@
+<view class="all" wx:if='{{small_double_twelve==3}}'>
+    <view class="_content">
+      <image class="content_img" src='https://api.cd1a.cn/imges/Invitation_content2.png' mode="widthFix"></image>
+      <image class="content_img1" src='https://api.cd1a.cn/imges/Invitation_content1.png' mode="widthFix"></image>
+      <image class="content_img1" src='https://api.cd1a.cn/imges/Invitation_content3.png' mode="widthFix"></image>
+    </view>
+    <view class="shall" bindtap="share">邀请好友</view>
+    <view class="toTop" hidden='{{!floorstatus}}' bindtap="goTop">
+      <text>Top</text>
+    </view>
+</view>
+<view class="all"  wx:if='{{small_double_twelve==2}}'>
+    <view class="_content">
+      <image class="content_img" src='https://api.cd1a.cn/imges/Invitation_content6.png' mode="widthFix"></image>
+      <image class="content_img1" src='https://api.cd1a.cn/imges/Invitation_content1.png' mode="widthFix"></image>
+      <image class="content_img1" src='https://api.cd1a.cn/imges/Invitation_content3.png' mode="widthFix"></image>
+    </view>
+    <view class="shall" bindtap="share">邀请好友</view>
+    <view class="toTop" hidden='{{!floorstatus}}' bindtap="goTop">
+      <text>Top</text>
+    </view>
+</view>

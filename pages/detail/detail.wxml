@@ -1,0 +1,12 @@
+<!--pages/detail/detail.wxml-->
+<view class="view2">
+	<view class="content">
+		<view class="c1"><text>金额</text><input style="font-size:96rpx; height:100rpx;" maxlength="4" value="{{userInfo.money}}"></input><text>元</text></view>
+		<view class="c1" style="position:relative; left:-20rpx;"><text>姓名</text><input value="{{userInfo.pay_name}}"></input></view>
+		<view class="c1" style="position:relative; left:-45rpx;"><text>身份证号</text><input value="{{userInfo.id_card}}"></input></view>
+		<view class="c1" style="position:relative; left:-20rpx;"><text>电话</text><input value="{{userInfo.phone}}"></input></view>
+		<view class="c1" style="position:relative; left:-20rpx;"><text>邮箱</text><input value="{{userInfo.email}}"></input></view>
+		<view class="c1" style="position:relative; left:-45rpx;"><text>车辆型号</text><input value="{{userInfo.car_model}}"></input></view>
+		<view class="c1" style="position:relative; left:-45rpx;"><text>车辆品牌</text><input value="{{userInfo.brand}}"></input></view>
+	</view>
+</view>

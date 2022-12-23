@@ -1,0 +1,69 @@
+<view class="u {{isHide?'l':''}}">
+  <view class="top">
+    <view class="top_button" bindtap='integralRule'>积分规则</view>
+    <view class="top_button_" bindtap='information'>我的地址管理</view>
+    <text class="top_num">{{integral}}</text>
+    <text class="top_tip">积分数量</text>
+  </view>
+  <view class="adv" bindtap='share'>
+    <image class="adv_img" src="https://api.cd1a.cn/imges/banner.png" mode="widthFix"></image>
+  </view>
+  <view class="content {{isHide?'ll':''}}">
+    <view class="content_nav">
+      <view class="content_nav_1">
+        <view class="{{check_index == 0 ? 'nav_check':''}}" id="nav_0" bindtap="navClick">积分商城</view>
+      </view>
+      <view class="content_nav_line"></view>
+      <view class="content_nav_2">
+        <view class="{{check_index == 1 ? 'nav_check':''}}" id="nav_1" bindtap="navClick">积分明细</view>
+      </view>
+    </view>
+    <!-- 积分商城 -->
+    <view class="content_goods {{check_index == 1?'right100':''}}">
+      <scroll-view class="goods" scroll-y="false" bindscroll="scrollFun" bindscrolltolower="loadMore">
+        <view class="goods_con">
+          <view class="goods_item" bindtap='commodityDetail' data-id="{{item.goods_id}}" wx:for="{{goods_list}}" wx:key="index">
+            <view class="goods_item_content">
+              <view class="goods_item_img">
+                <image src="{{item.face_url}}"></image>
+              </view>
+              <view class="goods_item_introduce">
+                <text class="goods_name">{{item.brand}}   {{item.name}}</text>
+                <text class="goods_synopsis">{{item.descrip}}</text>
+                <text class="goods_grade">所需积分:<text class="goods_grade_num">{{item.integral}}</text></text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="notMoer1" wx:if="{{total == goods_list.length}}">没有更多</view>
+      </scroll-view>
+    </view>
+    <!-- 积分明细 -->
+    <view class="content_goods1 {{check_index == 0?'left100':''}}">
+      <scroll-view class="goods" scroll-y="false" bindscroll="scrollFun" bindscrolltolower="loadMore">
+        <view class="goods1_con">
+          <view class='content_goods_' wx:for='{{list}}' wx:key='idx'>
+            <view class='detailed'>
+              <view>
+                <text decode="{{true}}">{{item.creat_time}}</text>
+              </view>
+              <view style='text-align:left'>
+                {{item.remark}}
+              </view>
+              <view class="logistics" >
+                <text bindtap="logistics" data-logistics_id="{{item.mall_order_id}}" wx:if='{{item.classify==2}}'>查看物流</text>
+              </view>
+              <view class='num_' wx:if='{{item.sign==1}}'>
+                - {{item.integral}}
+              </view>
+              <view class='num' wx:if='{{item.sign==2}}'>
+                + {{item.integral}}
+              </view>
+            </view>
+          </view>
+          <view class="notMoer2" wx:if="{{total == list.length}}">没有更多</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

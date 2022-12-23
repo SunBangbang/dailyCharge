@@ -1,0 +1,347 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "permissions": {
+    "openapi": [
+      "templateMessage.send"
+    ]
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "disableUseStrict": false,
+    "minifyWXML": true,
+    "showES6CompileOption": false,
+    "useCompilerPlugins": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.16.0",
+  "appid": "wxfa0364cb759aead2",
+  "projectname": "%E5%A4%A9%E5%A4%A9%E5%85%85%E7%94%B5",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "个人中心",
+          "pathName": "pages/personalCenter/personalCenter",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "pages/commodityDetail/commodityDetail",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "shopopngMall",
+          "pathName": "pages/shoppongMall/shoppongMall",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "邀请详情",
+          "pathName": "pages/invitationDetails/invitationDetails",
+          "query": ""
+        },
+        {
+          "name": "充电记录",
+          "pathName": "pages/charge/charge",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "充值",
+          "pathName": "pages/wxRecharge/wxRecharge",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的卡包",
+          "pathName": "pages/cardBag/cardBag",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "确定兑换",
+          "pathName": "pages/Dexchange/Dexchange",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的引荐",
+          "pathName": "pages/recommendation/recommendation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "地址管理",
+          "pathName": "pages/allAddress/allAddress",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我要购车",
+          "pathName": "pages/buyCar/procedure/procedure",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "交付定金",
+          "pathName": "pages/buyCar/disposablePay/disposablePay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "下载app",
+          "pathName": "pages/buyCar/byStagesPay/byStagesPay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购车当前流程",
+          "pathName": "pages/buyCar/rate/rate",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购车邀请",
+          "pathName": "pages/buyCar/invitation/invitation",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "推荐好友",
+          "pathName": "pages/buyCar/recommend/recommend",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "支付尾款",
+          "pathName": "pages/buyCar/shopping/shopping",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购车-车辆详情",
+          "pathName": "pages/buyCar/shopping/shopping",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购车-支付",
+          "pathName": "pages/buyCar/payMethod/payMethod",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购车-地址填写",
+          "pathName": "pages/buyCar/editAddress/editAddress",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "地图",
+          "pathName": "pages/buyCar/map_/map_",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "开启页面",
+          "pathName": "pages/openCharging/openCharging",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "积分商城",
+          "pathName": "pages/shoppongMall/shoppongMall",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商城-地址列表",
+          "pathName": "pages/allAddress/allAddress",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商城-详情",
+          "pathName": "pages/commodityDetail/commodityDetail",
+          "query": "https://api.cd1a.cn/index.php/index3/shop/goods_detail?form_id=null&goods_id=undefined",
+          "scene": null
+        },
+        {
+          "name": "商城-结算",
+          "pathName": "pages/Dexchange/Dexchange",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "空白",
+          "pathName": "pages/hehe/hehe",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "设备报修",
+          "pathName": "pages/repair/repair",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商城物流信息",
+          "pathName": "pages/logistics/logistics",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "远程开启",
+          "pathName": "pages/remoteOpen/remoteOpen",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商城商品详情",
+          "pathName": "pages/commodityDetail/commodityDetail",
+          "query": "id=16",
+          "scene": null
+        },
+        {
+          "name": "双十一活动",
+          "pathName": "pages/doubleEleven/doubleEleven",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": 1011
+        },
+        {
+          "name": "pages/H8/H8",
+          "pathName": "pages/H8/H8",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "月卡",
+          "pathName": "pages/mcard/mcard",
+          "query": "num_id=0862671041186987&card_id=226512&upgrade=3",
+          "scene": null
+        },
+        {
+          "name": "卡券列表",
+          "pathName": "pages/cardBag/cardBag",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "开启页面",
+          "pathName": "pages/openCharging/openCharging",
+          "query": "num_id=0862671041186987",
+          "scene": null
+        },
+        {
+          "name": "购车定金",
+          "pathName": "pages/buyCar/disposablePay/disposablePay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购车商品详情",
+          "pathName": "pages/buyCar/shopping/shopping",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购车确定购买",
+          "pathName": "pages/buyCar/payMethod/payMethod",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "开始充电",
+          "pathName": "pages/openCharging/openCharging",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "签到送礼",
+          "pathName": "pages/signin/signin",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/videotest/videotest",
+          "pathName": "pages/videotest/videotest",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "倒计时页面",
+          "pathName": "pages/countDown/countDown",
+          "query": "log_id= 15982002&get_coupon=2",
+          "scene": null
+        },
+        {
+          "name": "签到充值",
+          "pathName": "pages/checkRecharge/checkRecharge",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "特惠套餐",
+          "pathName": "pages/specialPackage/specialPackage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/H7/H7",
+          "pathName": "pages/H7/H7",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

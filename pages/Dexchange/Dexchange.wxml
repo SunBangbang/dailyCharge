@@ -1,0 +1,49 @@
+<view class='all'>
+  <view class='dexchange_top' wx:if='{{data.goods_detail.classify==2 && !address}}'>
+    <view>请填写收货地址</view>
+    <view>
+      <image src='https://api.cd1a.cn/imges/modify.png' mode="widthFix" bindtap='choseAddress'></image>
+    </view>
+  </view>
+
+  <view class='dexchange_top1' wx:if='{{data.goods_detail.classify==2 && address}}'>
+    <view class='address'>
+      <view>{{address.consignee}}</view>
+      <view>{{address.phone}}</view>
+      <view>
+        <image src='https://api.cd1a.cn/imges/choice.png' mode="widthFix" bindtap='choseAddress'></image>
+      </view>
+    </view>
+    <view class='address_'>
+      <text class='default' wx:if='{{address.default_addr==2}}'>默认</text>
+      <text class="address_tip" wx:if='{{address.tab==1}}'>公司</text>
+      <text class="address_tip" wx:if='{{address.tab==2}}'>家</text>
+      <text class="address_tip" wx:if='{{address.tab==3}}'>学校</text>
+      <text class="address_tip" wx:if='{{address.tab==4}}'>其他</text>
+      <text class="address_text">{{address.area}} {{address.address}}</text>
+    </view>
+  </view>
+
+
+  <view class='box'></view>
+  <view class='dexchange_ct'>
+    <view class='content'>
+      <view class='img'>
+        <image src='{{data.data.img}}' mode="widthFix"></image>
+      </view>
+      <view class='written '>
+        <view>{{data.goods_detail.brand}} {{data.goods_detail.descrip}}</view>
+        <view class='color'>商品规格：{{data.data.color}}{{data.data.size}}{{data.data.other_attr}}</view>
+      </view>
+      <view class='money'>
+        <view>{{data.goods_detail.integral*data.number}}</view>
+        <view class='color'>数量：x{{data.number}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='bottom'>
+    <form bindsubmit="exchange" report-submit="true" bindreset="formReset">
+      <button formType="submit">确认兑换</button>
+    </form>
+  </view>
+</view>

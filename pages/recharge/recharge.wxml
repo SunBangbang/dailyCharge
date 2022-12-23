@@ -1,0 +1,46 @@
+<view>
+  <view class="top">
+    <view class="top_text">
+      {{year_month}}
+      <!-- <view class="top_arrow"></view> -->
+    </view>
+    <picker mode="date" value="{{changeDate}}" fields="month" class="top_button" bindchange="bindDateChange">
+      选择
+    </picker>
+  </view>
+  <scroll-view class="content" scroll-y="true" bindscrolltolower="loadMore">
+    <view class='content_list'>
+      <view class='recharge' wx:for='{{recordDate}}' wx:key='idx'>
+        <view>{{item.time}}</view>
+        <view class='price'>充值 ¥
+          <text>{{item.money/100}}</text>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{recordDate.length == total}}" class="notMore">没有更多</view>
+  </scroll-view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

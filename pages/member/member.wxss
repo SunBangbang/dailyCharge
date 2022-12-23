@@ -1,0 +1,167 @@
+/* top */
+
+.all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.member_top {
+  border-bottom: 2rpx solid #efefef;
+}
+
+.top_img {
+  margin: 24rpx;
+}
+
+.member_top image {
+  width: 702rpx;
+  height: 396rpx;
+  position: relative;
+}
+
+.member_top .money {
+  font-size: 60rpx;
+  color: #9b8442;
+  position: absolute;
+  right: 64rpx;
+  top: 34rpx;
+}
+
+.member_top .money text {
+  font-size: 24rpx;
+  padding-right: 8rpx;
+}
+
+.detail {
+  color: #998443;
+  font-size: 22rpx;
+  position: absolute;
+  left: 40rpx;
+  top: 346rpx;
+}
+
+/* 标题绿色 */
+
+.member_center {
+  margin-top: 48rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: #333;
+  font-weight: 500;
+  width: 100%;
+}
+
+.member_center .center_top text {
+  display: inline-block;
+  color: #0da297;
+  border-left: 4rpx solid #0da297;
+  width: 4rpx;
+  height: 28rpx;
+}
+
+/* 图标 */
+
+.member_center .center_top text:nth-child(1) {
+  margin-right: 12rpx;
+}
+
+.member_center .center_top text:nth-child(2) {
+  margin-left: 20rpx;
+}
+
+.member_center .icon {
+  margin-top: 40rpx;
+   display: flex;
+  justify-content: center;
+}
+.member_center .icon_img image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.member_center .icon_img {
+  flex: 1;
+  text-align: center;
+}
+
+.member_center .title {
+  color: #333;
+  font-size: 24rpx;
+  margin-top: 18rpx;
+  font-weight: 600;
+}
+
+.member_center .content text {
+  display: inline-block;
+  width: 128rpx;
+  font-size: 20rpx;
+  color: #666;
+  text-align: center;
+  margin-top: 14rpx;
+  font-weight: 200;
+}
+
+/* 警告 */
+
+.warning {
+  font-size: 22rpx;
+  color: #e10d26;
+  text-align: center;
+  margin: 35rpx auto;
+  font-weight: 600;
+  position: relative;
+  padding:0 24rpx;
+}
+
+/* 权益 */
+
+.equity {
+  color: #333;
+  font-size: 30rpx;
+  text-align: center;
+  font-weight: 200;
+  flex: 1;
+  padding-bottom: 170rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.equity text {
+  color: #0da297;
+}
+
+.equity icon {
+  width: 70rpx;
+}
+
+/* 按钮 */
+
+.member_btn {
+  width: 100%;
+  position: fixed;
+  bottom: 70rpx;
+}
+
+.btn {
+  border-radius: 36rpx;
+  background: #dfdfdf;
+  margin: 0 74rpx;
+  color: #999;
+  height: 72rpx;
+  line-height: 72rpx;
+}
+
+.btn1 {
+  border-radius: 36rpx;
+  background: #0da297;
+  margin: 0 74rpx;
+  color: #fff;
+}
+
+button::after {
+  border: none;
+}

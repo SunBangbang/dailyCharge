@@ -1,0 +1,89 @@
+.mask {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.RAall {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 70%;
+  transform: translateY(-55%);
+  text-align: center;
+}
+
+.RAall .RAbg {
+  z-index: 6;
+  width: 80%;
+  position: relative;
+}
+.RAcenter{
+  z-index: 7;
+  position: relative;
+  bottom: 567rpx;
+}
+.RAall .RA50 {
+ height: 153rpx;
+}
+.RA51{
+  background:#fff32e;
+  color: #3f33e5;
+  width:260rpx;
+  height:60rpx;
+  font-size: 32rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin: 0 auto;
+  font-weight: 600;
+}
+.RA50 image {
+  width: 440rpx;
+  height: 120rpx;
+}
+
+.RA50_2 {
+  position: relative;
+  bottom: 138rpx;
+}
+
+.RA1_1 {
+  color: #66A504;
+  width: 40rpx;
+  height: 40rpx;
+  background: rgba(255, 243, 46, 1);
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 26rpx;
+}
+
+.RA1_2 {
+  color: #106248;
+  font-size: 64rpx;
+}
+
+.RA1_3 {
+  font-size: 38rpx;
+  color: rgba(16, 98, 72, 1);
+}
+
+.RA2 {
+  width: 360rpx;
+  height: 28rpx;
+  background: rgba(255, 255, 255, 1);
+  color: #333333;
+  font-size: 20rpx;
+  margin-left: 40rpx;
+}

@@ -1,0 +1,101 @@
+page {
+  background: #f4f4f4;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.top {
+  height: 96rpx;
+  background: #fff;
+  position: relative;
+}
+
+.top_text {
+  display: inline-block;
+  font-size: 46rpx;
+  line-height: 96rpx;
+  margin-left: 26rpx;
+  position: relative;
+}
+
+.top_arrow {
+  position: absolute;
+  right: -30rpx;
+  top: 32rpx;
+  width: 18rpx;
+  height: 18rpx;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+  transform: rotate(135deg);
+}
+
+.top_button {
+  position: absolute;
+  border-radius: 22rpx;
+  background: #333;
+  font-size: 26rpx;
+  width: 96rpx;
+  height: 44rpx;
+  text-align: center;
+  line-height: 44rpx;
+  color: #fff;
+  top: 26rpx;
+  right: 24rpx;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  top: 109rpx;
+  width: 100%;
+}
+
+.content_list {
+  background: #fff;
+}
+
+.recharge {
+  display: flex;
+  color: #333;
+  border-top: 2rpx solid #e5e5e5;
+  margin: 0 24rpx;
+}
+
+.recharge:nth-child(1) {
+  border-top: none;
+}
+
+.recharge view {
+  flex: 1;
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.recharge view:nth-child(1) {
+  font-size: 22rpx;
+}
+
+.recharge .price {
+  text-align: right;
+  color: #0da297;
+  font-size: 24rpx;
+}
+
+.pricered {
+  text-align: right;
+  color: #fd4e57;
+  font-size: 24rpx;
+}
+
+.recharge view  text {
+  font-size: 36rpx;
+}
+
+.notMore {
+  padding: 20rpx 0;
+  font-size: 22rpx;
+  text-align: center;
+  color: #999;
+}

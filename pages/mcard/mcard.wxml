@@ -1,0 +1,47 @@
+<view>
+  <view class='mcard_title'>
+    <image class='mcard_title_background' src='{{data.img}}' mode="widthFix"></image>
+    <view class='mcard_title_content'>
+      <!-- <view class='mcard_title_price'>
+        <text>¥</text>
+        <text class='mcard_title_price_num'>{{data.this_pay/100}}</text>
+      </view> -->
+      <!-- <text class='mcard_title_tip'>有效期内可充电{{data.card_limit_time}}小时</text> -->
+      <text class='mcard_title_date'>有效日期：{{data.card_begin_time}} - {{data.card_end_time}}</text>
+    </view>
+  </view>
+
+
+  <view class='options'>
+    <view class='option_item {{index == checkIndex ? "check":""}}' wx:for="{{data.list}}" wx:key="index" bindtap='choose' data-index="{{index}}" wx:if="{{data.rank != 1}}">
+      <view class='option_centent'>
+        <text class='option_item_name'>充电功率：{{item.power}}</text>
+        <text class='option_item_price'>{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='mcard_context_tip1'>
+    <view>温馨提示:</view>
+    <view>{{data.list[checkIndex].descrip}}</view>
+  </view>
+
+  <!-- <view class='mcard_context_tip2' wx:if="{{data.rank == 1}}">
+    <view wx:if='{{data.type==2}}'>月卡权益:</view>
+    <view>{{data.descript}}</view>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 
+  </view> -->
+
+  <view class='mcard_context1'>
+    <icon type="success" size='14' color='#b2b2b2' data-index='1' bindtap='icon1' wx:if='{{icon1}}' />
+    <icon type="success" size='14' color='#0da297' data-index='2' bindtap='icon2' wx:if='{{icon2}}' />
+    <text style="font-size: 30rpx;" bindtap='mcard_'>点击确认并同意<text bindtap="mcard_">《月卡权益》</text></text>
+    <!-- <text wx:if="{{takeTime>0}}">({{takeTime}})</text> -->
+  </view>
+  <view class='mcard_bottom'>
+    <view class='mcard_bottom_total'>
+      <text>总计：</text>
+      <text style='color:#0DA297'>¥<text style='font-size:50rpx'>{{data.upgrade == 3 ? (data.list[checkIndex].this_pay-data.have_pay)/100:data.list[checkIndex].this_pay/100}}</text></text>
+      <!-- <text style='color:#0DA297' wx:if="{{data.rank == 1}}">¥<text style='font-size:50rpx'>{{data.this_pay/100}}</text></text> -->
+    </view>
+     <button class='mcard_bottom_submit' bindtap="pay">确定支付</button>
+  </view>
+</view>

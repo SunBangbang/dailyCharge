@@ -1,0 +1,6 @@
+<!--pages/agreement/agreement.wxml-->
+<!-- 授权页面 -->
+<view class='all'>
+ <rich-text nodes="{{data}}"></rich-text>
+</view>
+

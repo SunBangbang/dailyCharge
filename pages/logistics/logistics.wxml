@@ -1,0 +1,38 @@
+<view class='all'>
+  <!-- 商品信息 -->
+  <view class='dexchange_ct'>
+    <view class='content'>
+      <view class='img'>
+        <image src='{{goods_detail.attr_img_url}}' mode="widthFix"></image>
+      </view>
+      <view class='written '>
+        <view>{{goods_detail.goods_name}}</view>
+        <view class='color'>商品规格：{{goods_detail.color}}{{goods_detail.size}}{{goods_detail.other_attr}}</view>
+      </view>
+      <view class='money'>
+        <view class='color'>数量：x{{goods_detail.size}}</view>
+        <view class="integral">{{goods_detail.integral}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 物流信息 -->
+  <view class="logistics_name">
+    <text>订单编号：{{goods_detail.logisty_num}}\n 承运商家：{{goods_detail.express_company}}</text>
+  </view>
+  <view class="content1">
+    <scroll-view class="content_scroll">
+      <view class="rate_item" wx:for="{{listData}}" wx:key="index">
+        <view class="item_no"></view> 
+        <view class="item_content">
+          <view class="item_tip">
+            <text wx:for="{{item.context}}" wx:key="idx" wx:for-item="contextItem" class='{{contextItem.type=="phone"?"phone":""}}' bindtap='{{contextItem.type=="phone"?"mobie":""}}' data-phone='{{contextItem.value}}'>{{contextItem.value}}</text>
+          </view>
+          <view class="item_date">
+            <text>{{item.time}}</text>
+          </view>
+        </view>
+        <view class="item_dashes"></view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

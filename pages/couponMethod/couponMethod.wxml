@@ -1,0 +1,3 @@
+<view wx:for='{{data}}' wx:key='idx' class="all">
+	<image src="{{item.img}}" mode='widthFix'></image>
+</view>

@@ -1,0 +1,90 @@
+<scroll-view class="all" scroll-y="true" bindscroll="scrollFun">
+  <view class="all_con">
+    <view class="comm_img" style='height:{{sysWidth}}px'>
+      <swiper autoplay="{{autoplay}}" interval="2000" indicator-dots='true' indicator-active-color='#0da297' ndicator-color='#f1f1f1'>
+        <block wx:for="{{data.carousel}}" wx:key='idx'>
+          <swiper-item>
+            <image src="{{item}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="comm_price">
+      <view class="price">
+        <!-- <text class="price_unit">¥</text> -->
+        <text class="price_number">{{data.goods_detail.integral}}</text>
+      </view>
+      <view class="comm_title">
+        <text>{{data.goods_detail.brand}} {{data.goods_detail.descrip}}</text>
+      </view>
+    </view>
+
+    <view style="height:12rpx;background-color:#F4F4F4;width:100%;"></view>
+
+    <view class="comm_option">
+      <view class="option_item" bindtap="choiceComm">
+        <view class="option_name">选择</view>
+        <view class="option_value">
+          <text wx:if="{{isSure}}">已选择　{{data.sku[selectIndex].color}} {{data.sku[selectIndex].size}} {{data.sku[selectIndex].other_attr}}</text>
+          <text wx:if="{{!isSure}}">选择商品规格  数量</text>
+        </view>
+        <view class="option_choice">
+          <image src="https://api.cd1a.cn/imges/choice.png" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+
+    <view class='{{showDetail?"showDetail":"hideDetail"}}'>
+      <div class='zero_img' wx:for='{{data.details_carousel}}' wx:key='idx'>
+        <image src='{{item}}' mode="widthFix"></image>
+      </div>
+    </view>
+
+
+    <button class="comm_button" bindtap="choiceComm">点击兑换</button>
+  </view>
+</scroll-view>
+
+<view class="choice_comm_mask choice_comm_mask_{{choiceCommIsShow?'show':'hide'}}" bindtap="choiceClose"></view>
+<view class="choice_comm choice_comm_{{choiceCommIsShow?'show':'hide'}}">
+  <view class="choice_img">
+    <image src="{{data.sku[selectIndex].img}}"></image>
+  </view>
+  <view class="choice_price">
+    <view class="price">
+      <!-- <text class="price_unit">¥</text> -->
+      <text class="price_number">{{data.goods_detail.integral}}  <text> (库存:{{data.sku[selectIndex].stock}})</text></text>
+    </view>
+    <view class="price_color">
+      <text>已选择　{{data.sku[selectIndex].color}} {{data.sku[selectIndex].size}} {{data.sku[selectIndex].other_attr}}</text>
+    </view>
+  </view>
+  <view class="choice_option">
+    <view class="choice_option_name">
+      <text>商品规格</text>
+    </view>
+    <view class="choice_option_list">
+      <scroll-view class='choice_option_list_scroll' scroll-y="true">
+        <view>
+          <view wx:for="{{data.sku}}" wx:key="index" bindtap="selectColor" data-index="{{index}}" class="choice_option_button {{selectIndex == index?'selected':''}}">{{item.color}} {{item.size}} {{item.other_attr}}</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="choice_num">
+    <view class="choice_num_name">
+      <text>购买数量</text>
+    </view>
+    <view class="choice_num_choice">
+      <button class="choice_num_reduce" bindtap="reduceNum">
+        <view></view>
+      </button>
+      <text class="choice_num_num">{{num}}</text>
+      <button class="choice_num_add" bindtap="addNum">
+        <view></view>
+      </button>
+    </view>
+  </view>
+  <button class="choice_sure {{isShortage?'choice_sure_':'choice_sure'}}" bindtap="choiceSure">确定</button>
+</view>
